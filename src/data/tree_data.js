@@ -206,7 +206,161 @@ const treeData = [
         }
     ],
     [ // Beast
+        {
+            skillID: 'desperation',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'true_endurance',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
+            skillID: 'loyalty_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 1},
+            barSize: 6
+        },
+        {
+            skillID: 'lick_wounds',
+            baseSkill: false,
+            coords: {x: 0, y: 2},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [1],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'auto-lick',
+            baseSkill: false,
+            coords: {x: 1, y: 2},
+            numBefore: 1,
+        },
+        {
+            skillID: 'protect',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [3],
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'hit-taker',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [3],
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'protection_vow',
+            baseSkill: false,
+            coords: {x: 1, y: 3},
+            numBefore: 2,
+        },
+        {
+            skillID: 'self-defense',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'beast_roar',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [7],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'preemptive_roar',
+            baseSkill: false,
+            coords: {x: 1, y: 6},
+            numBefore: 1,
+        },
+        {
+            skillID: undefined,
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            numAfter: 1,
+            afterSkip: 1,
+            preReqLevels: [10],
+            numBefore: 1
+        },
+        {
+            skillID: 'endurance',
+            baseSkill: false,
+            coords: {x: 2, y: 10.5},
+            numAfter: 0,
+            numBefore: 8, // really only 2 but need to make line longer
+            beforeStyle: 'centered',
+        },
 
+        {
+            skillID: 'claw_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 8},
+            barSize: 6
+        },
+        {
+            skillID: undefined,
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numAfter: 1,
+            afterSkip: 1,
+            preReqLevels: [10],
+            numBefore: 1
+        },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 15},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'deadly_resolve',
+            baseSkill: false,
+            coords: {x: 1, y: 15},
+            numBefore: 1
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: false,
+            coords: {x: 2, y: 15}
+        },
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 16},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'physical_def_up',
+            baseSkill: true,
+            coords: {x: 0, y: 17},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'bull_charge',
+            baseSkill: false,
+            coords: {x: 1, y: 16},
+            numBefore: 2
+        },
+        {
+            skillID: 'natural_instinct',
+            baseSkill: false,
+            coords: {x: 2, y: 16}
+        },
     ],
     [ // Dark Hunter
         {
