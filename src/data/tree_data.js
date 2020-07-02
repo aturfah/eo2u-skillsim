@@ -1219,10 +1219,88 @@ const treeData = [
             barSize: 4
         },
         {
+            skillID: 'raging_edge',
+            baseSkill: false,
+            coords: {x: 0, y: 2},
+            preReqLevels: [1],
+            numBefore: 1
+        },
+        {
+            skillID: 'tornado',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
+            preReqLevels: [3],
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'blinding_slash',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            preReqLevels: [5],
+            numBefore: 1
+        },
+        {
+            skillID: 'falcon_slash',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            preReqLevels: [10],
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'hurricane',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numBefore: 3,
+            beforeStyle: 'centered'
+        },
+        {
             skillID: 'axe_mastery',
             baseSkill: true,
             coords: {x: 0, y: 6},
             barSize: 4
+        },
+        {
+            skillID: 'boomerang_axe',
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            preReqLevels: [1],
+            numBefore: 1
+        },
+        {
+            skillID: 'head_bash',
+            baseSkill: false,
+            coords: {x: 0, y: 8},
+            preReqLevels: [3],
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'stunning_smash',
+            baseSkill: false,
+            coords: {x: 0, y: 9},
+            preReqLevels: [5],
+            numBefore: 1
+        },
+        {
+            skillID: 'charge_smash',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            preReqLevels: [10],
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'heavy_smash',
+            baseSkill: false,
+            coords: {x: 1, y: 9},
+            numBefore: 3,
+            beforeStyle: 'centered'
         },
     ],
     [ // Medic
