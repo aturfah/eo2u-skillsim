@@ -622,7 +622,95 @@ const treeData = [
         },
     ],
     [ // Fafnir
-
+        {
+            skillID: 'transform',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'ignition_ray',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
+            skillID: 'akashic_nova',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 2, y: 0}
+        },
+        {
+            skillID: 'blade_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 1},
+            barSize: 7
+        },
+        {
+            skillID: 'sonic_raid',
+            baseSkill: false,
+            coords: {x: 0, y: 2},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [1],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'gale_rush',
+            baseSkill: false,
+            coords: {x: 1, y: 2},
+            numBefore: 1,
+        },
+        {
+            skillID: 'flame_sabre',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
+            numBefore: 1,
+            preReqLevels: [3]
+        },
+        {
+            skillID: 'freeze_sabre',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numBefore: 1,
+            preReqLevels: [3]
+        },
+        {
+            skillID: 'shock_sabre',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            preReqLevels: [3]
+        },
+        {
+            skillID: 'delayed_chase',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'overkiller',
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [7],
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'full_slash',
+            baseSkill: false,
+            coords: {x: 1, y: 7},
+            numBefore: 1
+        },
+        {
+            skillID: 'resonance',
+            baseSkill: false,
+            coords: {x: 0, y: 8},
+            numBefore: 1,
+            preReqLevels: [10]
+        }
     ],
     [ // Gunner
         {
