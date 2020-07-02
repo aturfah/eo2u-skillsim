@@ -103,7 +103,7 @@ def parse_table(table_node):
                         'label': node.text,
                         'width': node.attrib.get('style').replace('width:', '')
                     })
-                max_level = len(levels)
+                max_level = len(levels) - 1
             else:
                 for node in row[1:]:
                     levels.append({
