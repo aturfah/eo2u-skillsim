@@ -52,19 +52,27 @@ class SkillTreeNode extends Component {
             header = <b>{this.props.skillData.name}</b>
             nodeColor = '#8f121a'; 
         }
-
-        let levelInfo = <span>Lv.{this.props.skillLevel}</span>;
         const nodeStyle = {
             backgroundColor: nodeColor,
+        }
+
+        let levelInfo = <span></span>;
+        let buttons = <div></div>
+        if (this.props.skillData.force_boost === this.props.skillData.force_break) {
+            levelInfo = <span>Lv.{this.props.skillLevel}</span>
+            buttons = <div>
+                    <span className="ButtonText" onClick={() => this.increaseSkillLevel()}>(Lv. &uarr;)</span> &nbsp;
+                    <span className="ButtonText" onClick={() => this.maxSkillLevel()}>(Lv. &uArr;)</span> &nbsp;
+                    <span className="ButtonText" onClick={() => this.decreaseSkillLevel()}>(Lv. &darr;)</span> &nbsp;
+                    <span className="ButtonText" onClick={() => this.minSkillLevel()}>(Lv. &dArr;)</span>
+            </div>
         }
 
         return(<div style={nodeStyle} className="clickableNode NoHighlight" id={this.props.skillData._id}
                 onClick={() => {}}>
                     <span  className="skillInfo">{header} {levelInfo}</span> <br/>
-                    <span className="ButtonText" onClick={() => this.increaseSkillLevel()}>(Lv. &uarr;)</span> &nbsp;
-                    <span className="ButtonText" onClick={() => this.maxSkillLevel()}>(Lv. &uArr;)</span> &nbsp;
-                    <span className="ButtonText" onClick={() => this.decreaseSkillLevel()}>(Lv. &darr;)</span> &nbsp;
-                    <span className="ButtonText" onClick={() => this.minSkillLevel()}>(Lv. &dArr;)</span></div>)
+                    {buttons}
+            </div>)
     }
 }
 
