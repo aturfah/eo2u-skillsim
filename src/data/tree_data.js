@@ -592,14 +592,14 @@ const treeData = [
             barSize: 2
         },
         {
-            skillID: 'penetrator',
+            skillID: 'act_quick',
             baseSkill: false,
             coords: {x: 0, y: 18},
             numBefore: 1,
             preReqLevels: [5]
         },
         {
-            skillID: 'point_blank',
+            skillID: 'double_action',
             baseSkill: false,
             coords: {x: 0, y: 19},
             numBefore: 1,
