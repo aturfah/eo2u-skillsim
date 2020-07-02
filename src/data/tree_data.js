@@ -374,45 +374,45 @@ const treeData = [
         {
             skillID: 'hp_up',
             baseSkill: true,
-            coords: {x: 0, y: 15},
+            coords: {x: 0, y: 14},
             numAfter: 1,
             postReqLevels: [5]
         },
         {
             skillID: 'deadly_resolve',
             baseSkill: false,
-            coords: {x: 1, y: 15},
+            coords: {x: 1, y: 14},
             numBefore: 1
         },
         {
             skillID: 'tp_up',
             baseSkill: false,
-            coords: {x: 2, y: 15}
+            coords: {x: 2, y: 14}
         },
         {
             skillID: 'phys_atk_up',
             baseSkill: true,
-            coords: {x: 0, y: 16},
+            coords: {x: 0, y: 15},
             numAfter: 1,
             postReqLevels: [5]
         },
         {
             skillID: 'phys_def_up',
             baseSkill: true,
-            coords: {x: 0, y: 17},
+            coords: {x: 0, y: 16},
             numAfter: 1,
             postReqLevels: [5]
         },
         {
             skillID: 'bull_charge',
             baseSkill: false,
-            coords: {x: 1, y: 16},
+            coords: {x: 1, y: 15},
             numBefore: 2
         },
         {
             skillID: 'natural_instinct',
             baseSkill: false,
-            coords: {x: 2, y: 16}
+            coords: {x: 2, y: 15}
         },
     ],
     [ // Dark Hunter
