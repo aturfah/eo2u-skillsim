@@ -1139,6 +1139,63 @@ const treeData = [
             numBefore: 1,
             preReqLevels: [10]
         },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 13},
+            barSize: 2
+        },
+        {
+            skillID: 'sacrifice',
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [5],
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'reincarnate',
+            baseSkill: false,
+            coords: {x: 1, y: 14},
+            numBefore: 1,
+        },
+        {
+            skillID: 'life_trade',
+            baseSkill: false,
+            coords: {x: 0, y: 15},
+            numBefore: 1,
+            preReqLevels: [10]
+        },
+        {
+            skillID: 'curb_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 16},
+            numAfter: 1
+        },
+        {
+            skillID: 'chained_benefit',
+            baseSkill: false,
+            coords: {x: 1, y: 16},
+            numBefore: 1,
+            preReqLevels: [10]
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 17},
+        },
+        {
+            skillID: 'curb_def_up',
+            baseSkill: true,
+            coords: {x: 1, y: 17},
+        },
+        {
+            skillID: 'chop',
+            baseSkill: true,
+            coords: {x: 2, y: 17},
+        },
+
     ],
     [ // Highlander
         {
