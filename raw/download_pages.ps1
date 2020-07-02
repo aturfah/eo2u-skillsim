@@ -1,4 +1,4 @@
-$classes = "Alchemist", "Dark_Hunter", "Gunner", "Hexer", "Highlander", "Landsknecht", "Medic", "Protector", "Ronin", "Survivalist", "Troubadour"
+$classes = "Alchemist", "Dark_Hunter", "Gunner", "Hexer", "Highlander", "Landsknecht", "Medic", "Protector", "Ronin", "Survivalist", "Troubadour", "Beast", "War_Magus", "Sovereign", "Fafnir"
 $output_directory = "source_files"
 
 if (-not (Test-Path $output_directory)) {
@@ -8,7 +8,7 @@ if (-not (Test-Path $output_directory)) {
 foreach ($class in $classes) {
     Write-Output "Class: $class"
     $output_file = "$output_directory/$class.html"
-    $class_url = "https://etrianodysseywiki.org/wiki/$class/Skills/Etrian_Odyssey_Untold"
+    $class_url = "https://etrianodysseywiki.org/wiki/$class/Skills/Etrian_Odyssey_2_Untold"
     if (Test-Path $output_file) {
         Write-Output "  Already exists, skipping..."
     }
