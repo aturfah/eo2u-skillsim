@@ -209,7 +209,6 @@ const treeData = [
 
     ],
     [ // Dark Hunter
-        
         {
             skillID: 'trance',
             baseSkill: true,
@@ -420,192 +419,151 @@ const treeData = [
     ],
     [ // Gunner
         {
+            skillID: 'action_boost',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'supreme_bolt',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
             skillID: 'gun_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 0},
-            barSize: 9
-        },
-        {
-            skillID: 'head_snipe',
-            baseSkill: false,
             coords: {x: 0, y: 1},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [1],
-        },
-        {
-            skillID: 'arm_snipe',
-            baseSkill: false,
-            coords: {x: 0, y: 2},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [1],
-        },
-        {
-            skillID: 'leg_snipe',
-            baseSkill: false,
-            coords: {x: 0, y: 3},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [1],
-        },
-        {
-            skillID: 'fire_rounds',
-            baseSkill: false,
-            coords: {x: 0, y: 4},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [3],
-        },
-        {
-            skillID: 'charged_fire',
-            baseSkill: false,
-            coords: {x: 1, y: 4},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [5],
-        },
-        {
-            skillID: 'ice_rounds',
-            baseSkill: false,
-            coords: {x: 0, y: 5},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [3],
-        },
-        {
-            skillID: 'charged_ice',
-            baseSkill: false,
-            coords: {x: 1, y: 5},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [5],
-        },
-        {
-            skillID: 'volt_rounds',
-            baseSkill: false,
-            coords: {x: 0, y: 6},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [3],
-        },
-        {
-            skillID: 'charged_volt',
-            baseSkill: false,
-            coords: {x: 1, y: 6},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [5],
-        },
-        {
-            skillID: 'charged_shot',
-            baseSkill: false,
-            coords: {x: 0, y: 7},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'penetrator', // GIVE PENETRATOR 2 LINES
-            baseSkill: false,
-            coords: {x: 0, y: 8},
-            numAfter: 2,
-            numBefore: 1,
-            preReqLevels: [7],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'recharge',
-            baseSkill: false,
-            coords: {x: 1, y: 7.5},
-            numAfter: 0,
-            numBefore: 2,
-            beforeStyle: 'centered',
-        },
-        {
-            skillID: 'ricochet',
-            baseSkill: false,
-            coords: {x: 0, y: 9},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [10],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'action_boost',
-            baseSkill: false,
-            coords: {x: 1, y: 8.5},
-            numAfter: 0,
-            numBefore: 1,
-        },
-        {
-            skillID: 'hp_up',
-            baseSkill: true,
-            coords: {x: 0, y: 10},
-            barSize: 2
+            barSize: 9
         },
         {
             skillID: 'medic_bullet',
             baseSkill: false,
-            coords: {x: 0, y: 11},
+            coords: {x: 0, y: 2},
+            numBefore: 1,
+            preReqLevels: [1]
+        },
+        {
+            skillID: 'fire_rounds',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [1],
-            postReqLevels: [3],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'ice_rounds',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [1],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'volt_rounds',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [1],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'charged_fire',
+            baseSkill: false,
+            coords: {x: 1, y: 3},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [2]
+        },
+        {
+            skillID: 'charged_ice',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [2]
+        },
+        {
+            skillID: 'charged_volt',
+            baseSkill: false,
+            coords: {x: 1, y: 5},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [2]
+        },
+        {
+            skillID: 'burst_shot',
+            baseSkill: false,
+            coords: {x: 2, y: 4},
+            numBefore: 3,
+            beforeStyle: 'centered'
+        },
+        {
+            skillID: 'head_snipe',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'arm_snipe',
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            numBefore: 1,
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'leg_snipe',
+            baseSkill: false,
+            coords: {x: 0, y: 8},
+            numBefore: 1,
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'charged_shot',
+            baseSkill: false,
+            coords: {x: 0, y: 9},
+            numBefore: 1,
+            preReqLevels: [7]
+        },
+        {
+            skillID: 'ricochet',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [10]
+        },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 11},
+            barSize: 2
         },
         {
             skillID: 'cover_fire',
             baseSkill: false,
             coords: {x: 0, y: 12},
-            numAfter: 1,
             numBefore: 1,
-            preReqLevels: [3],
-            postReqLevels: [3],
+            preReqLevels: [3]
         },
         {
             skillID: 'shell_shock',
             baseSkill: false,
-            coords: {x: 1, y: 11},
-            numAfter: 0,
-            numBefore: 2,
-        },
-        {
-            skillID: 'atk_up',
-            baseSkill: true,
             coords: {x: 0, y: 13},
-            barSize: 2
-        },
-        {
-            skillID: 'high_caliber',
-            baseSkill: false,
-            coords: {x: 0, y: 14},
             numAfter: 1,
             numBefore: 1,
-            preReqLevels: [1],
-            postReqLevels: [3],
+            postReqLevels: [5],
         },
         {
-            skillID: 'vulcan_stance',
+            skillID: 'preemptive_shell',
             baseSkill: false,
-            coords: {x: 0, y: 15},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [3],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'double_strike',
-            baseSkill: false,
-            coords: {x: 1, y: 14},
+            coords: {x: 1, y: 13},
             numAfter: 0,
-            numBefore: 2,
-        },
-        {
-            skillID: 'take',
-            baseSkill: true,
-            coords: {x: 0, y: 16},
-        },
+            numBefore: 1
+        }
     ],
     [ // Hexer
         {
