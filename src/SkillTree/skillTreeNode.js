@@ -13,7 +13,8 @@ class SkillTreeNode extends Component {
     }
 
     increaseSkillLevel() {
-        if (this.props.skillLevel < 10) {
+        console.log(this.props.skillData)
+        if (this.props.skillLevel < this.props.skillData.max_level) {
             this.incrementSkillLevel(1)
         }
     }
@@ -25,7 +26,7 @@ class SkillTreeNode extends Component {
     }
 
     maxSkillLevel() {
-        const delta = 10 - this.props.skillLevel;
+        const delta = this.props.skillData.max_level - this.props.skillLevel;
         if (delta > 0) {
             console.log('Maxing out skill level')
             this.incrementSkillLevel(delta)
