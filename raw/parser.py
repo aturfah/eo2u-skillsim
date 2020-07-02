@@ -42,6 +42,8 @@ def parse_table(table_node):
     growth_order = []
     prerequisites = []
     description = None
+    force_boost = False
+    force_break = False
 
     for row in table_node[0]:
         # Check for name
@@ -58,6 +60,13 @@ def parse_table(table_node):
             _id = _id.lower()
             continue
         
+        # Check for force skill
+        for node in row[0]:
+            if node.tag == "i" and "Force Boost" in node.text:
+                force_boost = True
+            if node.tag == "i" and "Force Break" in node.text:
+                force_break = True
+
         # Check for Mastery and Prerequisites
         if mastery is None:
             prereq_check = False
@@ -118,7 +127,9 @@ def parse_table(table_node):
         'levels': levels,
         'prerequisites': prerequisites,
         'growth': growth,
-        'growth_order': growth_order
+        'growth_order': growth_order,
+        'force_boost': force_boost,
+        'force_break': force_break
     }
 
     # print(output)
