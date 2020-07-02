@@ -710,7 +710,73 @@ const treeData = [
             coords: {x: 0, y: 8},
             numBefore: 1,
             preReqLevels: [10]
-        }
+        },
+        {
+            skillID: 'force_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 9},
+            barSize: 5
+        },
+        {
+            skillID: 'vital_shut',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [1]
+        },
+        {
+            skillID: 'mind_shut',
+            baseSkill: false,
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            preReqLevels: [1]
+        },
+        {
+            skillID: 'absorb',
+            baseSkill: false,
+            coords: {x: 0, y: 12},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [3],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'force_charge',
+            baseSkill: false,
+            coords: {x: 1, y: 12},
+            numBefore: 1,
+        },
+        {
+            skillID: 'force_shield',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [5],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'force_energy',
+            baseSkill: false,
+            coords: {x: 1, y: 13},
+            numBefore: 1,
+        },
+        {
+            skillID: 'force_reset',
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [10],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'force_charge',
+            baseSkill: false,
+            coords: {x: 1, y: 14},
+            numBefore: 1,
+        },
+
     ],
     [ // Gunner
         {
