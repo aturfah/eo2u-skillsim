@@ -449,7 +449,7 @@ const treeData = [
             coords: {x: 0, y: 3},
             numAfter: 1,
             numBefore: 1,
-            preReqLevels: [1],
+            preReqLevels: [3],
             postReqLevels: [5]
         },
         {
@@ -458,7 +458,7 @@ const treeData = [
             coords: {x: 0, y: 4},
             numAfter: 1,
             numBefore: 1,
-            preReqLevels: [1],
+            preReqLevels: [3],
             postReqLevels: [5]
         },
         {
@@ -467,7 +467,7 @@ const treeData = [
             coords: {x: 0, y: 5},
             numAfter: 1,
             numBefore: 1,
-            preReqLevels: [1],
+            preReqLevels: [3],
             postReqLevels: [5]
         },
         {
@@ -555,8 +555,8 @@ const treeData = [
             coords: {x: 0, y: 13},
             numAfter: 1,
             numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [10],
+            postReqLevels: [5],
+            preReqLevels: [10],
         },
         {
             skillID: 'preemptive_shell',
