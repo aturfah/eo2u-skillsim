@@ -297,22 +297,75 @@ const treeData = [
         {
             skillID: 'endurance',
             baseSkill: false,
-            coords: {x: 2, y: 10.5},
+            coords: {x: 2, y: 10},
             numAfter: 0,
-            numBefore: 8, // really only 2 but need to make line longer
+            numBefore: 7, // really only 2 but need to make line longer
             beforeStyle: 'centered',
         },
-
         {
             skillID: 'claw_mastery',
             baseSkill: true,
             coords: {x: 0, y: 8},
-            barSize: 6
+            barSize: 5
+        },
+        {
+            skillID: 'tiger_blow',
+            baseSkill: false,
+            coords: {x: 0, y: 9},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [1],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'wolf_fang',
+            baseSkill: false,
+            coords: {x: 1, y: 9},
+            numBefore: 1,
+        },
+        {
+            skillID: 'comet_drop',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [3],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'wildblow',
+            baseSkill: false,
+            coords: {x: 1, y: 10},
+            numBefore: 1,
+        },
+        {
+            skillID: 'beast_dance',
+            baseSkill: false,
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [5],
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'savage_rush',
+            baseSkill: false,
+            coords: {x: 0, y: 12},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [7],
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'berserk',
+            baseSkill: false,
+            coords: {x: 1, y: 11},
+            numBefore: 2
         },
         {
             skillID: undefined,
             baseSkill: false,
-            coords: {x: 0, y: 14},
+            coords: {x: 0, y: 13},
             numAfter: 1,
             afterSkip: 1,
             preReqLevels: [10],
@@ -344,7 +397,7 @@ const treeData = [
             postReqLevels: [5]
         },
         {
-            skillID: 'physical_def_up',
+            skillID: 'phys_def_up',
             baseSkill: true,
             coords: {x: 0, y: 17},
             numAfter: 1,
