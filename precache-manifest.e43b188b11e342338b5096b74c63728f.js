@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e47019c147f9ebe19b93664e5787e09",
+    "revision": "023625d38d7fcf4511b112d1a5a3b410",
     "url": "/eo2u-skillsim/index.html"
   },
   {
-    "revision": "c5261e27cd23b878109c",
+    "revision": "f7d234a28a04dc2374ca",
     "url": "/eo2u-skillsim/static/css/main.cd67cc42.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eo2u-skillsim/static/js/2.d527f4b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c5261e27cd23b878109c",
-    "url": "/eo2u-skillsim/static/js/main.f0d3a1f0.chunk.js"
+    "revision": "f7d234a28a04dc2374ca",
+    "url": "/eo2u-skillsim/static/js/main.a44f6844.chunk.js"
   },
   {
     "revision": "6009320b8957d3c26429",
