@@ -1493,6 +1493,77 @@ const treeData = [
             numBefore: 1,
             preReqLevels: [10],
         },
+        {
+            skillID: 'staff_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 8},
+            barSize: 3
+        },
+        {
+            skillID: 'heavy_strike',
+            baseSkill: false,
+            coords: {x: 0, y: 9},
+            numBefore: 1,
+            preReqLevels: [1],
+        },
+        {
+            skillID: 'medical_rod',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'vital_hit',
+            baseSkill: false,
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            preReqLevels: [10],
+        },
+        {
+            skillID: 'hp_up',
+            baseSkill: false,
+            coords: {x: 1, y: 8},
+            numAfter: 1,
+            postReqLevels: [3],
+        },
+        {
+            skillID: 'final_gift',
+            baseSkill: false,
+            coords: {x: 2, y: 8},
+            numBefore: 1
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: false,
+            coords: {x: 1, y: 9},
+            numAfter: 1,
+            postReqLevels: [3],
+        },
+        {
+            skillID: 'scavenge',
+            baseSkill: false,
+            coords: {x: 2, y: 9},
+            numBefore: 1
+        },
+        {
+            skillID: 'elem_def_up',
+            baseSkill: false,
+            coords: {x: 1, y: 10},
+            numAfter: 1,
+            postReqLevels: [3],
+        },
+        {
+            skillID: 'safe_passage',
+            baseSkill: false,
+            coords: {x: 2, y: 10},
+            numBefore: 1
+        },
+        {
+            skillID: 'take',
+            baseSkill: false,
+            coords: {x: 1, y: 11},
+        }
     ],
     [ // Protector
         {
