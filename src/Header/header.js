@@ -166,7 +166,8 @@ class Header extends Component {
         const imgStyle = {
             float: 'left',
             marginLeft: '5%',
-            width: '25%'
+            width: '377px',
+            height: 'auto'
         }
 
         return <div className="HeaderBar">
