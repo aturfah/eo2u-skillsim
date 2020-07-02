@@ -1,15 +1,27 @@
 const treeData = [
     [ // Alchemist
         {
+            skillID: 'analysis',
+            baseSkill: true,
+            forceSkill: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'eschaton',
+            baseSkill: true,
+            forceSkill: true,
+            coords: {x: 1, y: 0}
+        },
+        {
             skillID: 'formula_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 0},
-            barSize: 8
+            coords: {x: 0, y: 1},
+            barSize: 7
         },
         {
             skillID: 'fire_formula',
             baseSkill: false,
-            coords: {x: 0, y: 1},
+            coords: {x: 0, y: 2},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [1],
@@ -17,178 +29,184 @@ const treeData = [
         {
             skillID: 'ice_formula',
             baseSkill: false,
-            coords: {x: 0, y: 2},
+            coords: {x: 0, y: 3},
             numAfter: 1,
             numBefore: 1,
-            preReqLevels: [1]
+            preReqLevels: [1],
         },
         {
             skillID: 'volt_formula',
             baseSkill: false,
-            coords: {x: 0, y: 3},
+            coords: {x: 0, y: 4},
             numAfter: 1,
             numBefore: 1,
-            preReqLevels: [1]
+            preReqLevels: [1],
+        },
+        {
+            skillID: 'flame_formula',
+            baseSkill: false,
+            coords: {x: 1, y: 2},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [3],
+            preReqLevels: [5]
+        },        
+        {
+            skillID: 'freeze_formula',
+            baseSkill: false,
+            coords: {x: 1, y: 3},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [3],
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'spark_formula',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [3],
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'riot_formula',
+            baseSkill: false,
+            coords: {x: 2, y: 3},
+            numBefore: 3,
+            preReqLevels: [5],
+            beforeStyle: 'centered'
         },
         {
             skillID: 'inferno_formula',
             baseSkill: false,
-            coords: {x: 1, y: 1},
-            numAfter: 0,
+            coords: {x: 0, y: 5},
+            numAfter: 1,
             numBefore: 1,
+            postReqLevels: [3],
             preReqLevels: [5]
-        },
+        },        
         {
             skillID: 'cocytus_formula',
             baseSkill: false,
-            coords: {x: 1, y: 2},
-            numAfter: 0,
+            coords: {x: 0, y: 6},
+            numAfter: 1,
             numBefore: 1,
+            postReqLevels: [3],
             preReqLevels: [5]
         },
         {
             skillID: 'thor_formula',
             baseSkill: false,
-            coords: {x: 1, y: 3},
-            numAfter: 0,
+            coords: {x: 0, y: 7},
+            numAfter: 1,
             numBefore: 1,
+            postReqLevels: [3],
             preReqLevels: [5]
         },
         {
-            skillID: 'flame_formula',
+            skillID: 'compression',
             baseSkill: false,
-            coords: {x: 0, y: 4},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'freeze_formula',
-            baseSkill: false,
-            coords: {x: 0, y: 5},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'spark_formula',
-            baseSkill: false,
-            coords: {x: 0, y: 6},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'dilution',
-            baseSkill: false,
-            coords: {x: 1, y: 5},
-            numAfter: 0,
+            coords: {x: 1, y: 6},
             numBefore: 3,
+            preReqLevels: [5],
             beforeStyle: 'centered'
-        },
+        },        
         {
-            skillID: 'analysis',
-            baseSkill: false,
-            coords: {x: 0, y: 7},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [7],
-        },
-        {
-            skillID: 'pain_formula',
+            skillID: 'nuclear_formula',
             baseSkill: false,
             coords: {x: 0, y: 8},
-            numAfter: 1,
             numBefore: 1,
-            preReqLevels: [10],
+            preReqLevels: [10]
         },
         {
-            skillID: 'firelight',
-            baseSkill: false,
-            coords: {x: 1, y: 8},
-            numAfter: 2,
-            numBefore: 1,
-            preReqLevels: [1],
+            skillID: 'palm_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 9},
+            barSize: 5
         },
         {
-            skillID: 'light_formula',
+            skillID: 'fire_palm',
             baseSkill: false,
-            coords: {x: 2, y: 8},
-            numAfter: 0,
+            coords: {x: 0, y: 10},
             numBefore: 1,
-            preReqLevels: [1],
+            preReqLevels: [1]
         },
         {
-            skillID: 'light_tincture',
+            skillID: 'ice_palm',
             baseSkill: false,
-            coords: {x: 2, y: 9},
-            numAfter: 0,
+            coords: {x: 0, y: 11},
             numBefore: 1,
+            preReqLevels: [1]
+        },
+        {
+            skillID: 'volt_palm',
+            baseSkill: false,
+            coords: {x: 0, y: 12},
+            numBefore: 1,
+            preReqLevels: [1]
+        },
+        {
+            skillID: 'splash_palm',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numBefore: 1,
+            preReqLevels: [1]
+        },
+        {
+            skillID: 'additional_palm',
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numBefore: 1,
+            preReqLevels: [1]
         },
         {
             skillID: 'tp_up',
             baseSkill: true,
-            coords: {x: 0, y: 10},
-            barSize: 5
-        },
-        {
-            skillID: 'return_formula',
-            baseSkill: false,
-            coords: {x: 0, y: 11},
+            coords: {x: 0, y: 15},
             numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [1],
+            numBefore: 0,
+            barSize: 1
         },
         {
-            skillID: 'flee',
+            skillID: 'sight_formula',
             baseSkill: false,
-            coords: {x: 1, y: 11},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [1],
-        },
-        {
-            skillID: 'alchemy',
-            baseSkill: false,
-            coords: {x: 0, y: 12},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [2],
-        },
-        {
-            skillID: 'scavenge',
-            baseSkill: false,
-            coords: {x: 0, y: 13},
+            coords: {x: 0, y: 16},
             numAfter: 0,
             numBefore: 1,
             preReqLevels: [3],
         },
         {
-            skillID: 'sight_formula',
+            skillID: 'hp_up',
             baseSkill: false,
-            coords: {x: 0, y: 14},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [5],
-        },
-        {
-            skillID: 'focus',
-            baseSkill: false,
-            coords: {x: 0, y: 15},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [10],
-        },
-        {
-            skillID: 'chop',
-            baseSkill: true,
-            coords: {x: 0, y: 16},
+            coords: {x: 1, y: 15},
             numAfter: 0,
             numBefore: 0,
         },
+        {
+            skillID: 'chop',
+            baseSkill: false,
+            coords: {x: 2, y: 15},
+            numBefore: 0,
+            numAfter: 0
+        },
+        {
+            skillID: 'elem_atk_up',
+            baseSkill: false,
+            coords: {x: 1, y: 16},
+            numBefore: 0,
+            numAfter: 0
+        },
+        {
+            skillID: 'elem_def_up',
+            baseSkill: false,
+            coords: {x: 2, y: 16},
+            numBefore: 0,
+            numAfter: 0
+        }
+    ],
+    [ // Beast
+
     ],
     [ // Dark Hunter
         {
@@ -381,6 +399,9 @@ const treeData = [
             baseSkill: true,
             coords: {x: 1, y: 18}
         }
+    ],
+    [ // Fafnir
+
     ],
     [ // Gunner
         {
@@ -1695,6 +1716,9 @@ const treeData = [
             numBefore: 0
         },
     ],
+    [ // Sovereign
+
+    ],
     [ // Survivalist
         {
             skillID: 'bow_mastery',
@@ -2065,6 +2089,9 @@ const treeData = [
             barSize: 0
         },
         
+    ],
+    [ // War Magus
+
     ]
 ]
 
