@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/eo2u-skillsim/static/css/main.5f361e03.chunk.css",
+    "main.js": "/eo2u-skillsim/static/js/main.e88d5c81.chunk.js",
+    "main.js.map": "/eo2u-skillsim/static/js/main.e88d5c81.chunk.js.map",
+    "runtime-main.js": "/eo2u-skillsim/static/js/runtime-main.76f6377c.js",
+    "runtime-main.js.map": "/eo2u-skillsim/static/js/runtime-main.76f6377c.js.map",
+    "static/js/2.456dba74.chunk.js": "/eo2u-skillsim/static/js/2.456dba74.chunk.js",
+    "static/js/2.456dba74.chunk.js.map": "/eo2u-skillsim/static/js/2.456dba74.chunk.js.map",
+    "index.html": "/eo2u-skillsim/index.html",
+    "precache-manifest.50daada713958dbc903abf9e3b2107db.js": "/eo2u-skillsim/precache-manifest.50daada713958dbc903abf9e3b2107db.js",
+    "service-worker.js": "/eo2u-skillsim/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/eo2u-skillsim/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.456dba74.chunk.js.LICENSE.txt": "/eo2u-skillsim/static/js/2.456dba74.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/eo2u-skillsim/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76f6377c.js",
+    "static/js/2.456dba74.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.e88d5c81.chunk.js"
+  ]
+}
