@@ -1302,6 +1302,93 @@ const treeData = [
             numBefore: 3,
             beforeStyle: 'centered'
         },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 11},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'war_cry',
+            baseSkill: false,
+            coords: {x: 1, y: 11},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 12},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'triple_charge',
+            baseSkill: false,
+            coords: {x: 1, y: 12},
+            numAfter: 1,
+            numBefore: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'fire_chaser',
+            baseSkill: false,
+            coords: {x: 2, y: 10.5},
+            numBefore: 3,
+        },
+        {
+            skillID: 'ice_chaser',
+            baseSkill: false,
+            coords: {x: 2, y: 11.5},
+            numBefore: 1,
+        },
+        {
+            skillID: 'volt_chaser',
+            baseSkill: false,
+            coords: {x: 2, y: 12.5},
+            numBefore: 1,
+        },
+        {
+            skillID: 'phys_def_up',
+            baseSkill: true,
+            coords: {x: 0, y: 13},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'swordbreaker',
+            baseSkill: false,
+            coords: {x: 1, y: 13},
+            numBefore: 1,
+        },
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 14},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'fencer',
+            baseSkill: false,
+            coords: {x: 1, y: 14},
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'double_attack',
+            baseSkill: false,
+            coords: {x: 2, y: 14},
+            numBefore: 1,
+        },
+        {
+            skillID: 'mine',
+            baseSkill: true,
+            coords: {x: 0, y: 15},
+        },
     ],
     [ // Medic
         {
