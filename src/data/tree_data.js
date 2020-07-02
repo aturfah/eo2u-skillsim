@@ -547,7 +547,7 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 12},
             numBefore: 1,
-            preReqLevels: [3]
+            preReqLevels: [1]
         },
         {
             skillID: 'shell_shock',
@@ -555,7 +555,8 @@ const treeData = [
             coords: {x: 0, y: 13},
             numAfter: 1,
             numBefore: 1,
-            postReqLevels: [5],
+            preReqLevels: [5],
+            postReqLevels: [10],
         },
         {
             skillID: 'preemptive_shell',
@@ -563,7 +564,53 @@ const treeData = [
             coords: {x: 1, y: 13},
             numAfter: 0,
             numBefore: 1
-        }
+        },
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 14},
+            barSize: 2
+        },
+        {
+            skillID: 'penetrator',
+            baseSkill: false,
+            coords: {x: 0, y: 15},
+            numBefore: 1,
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'point_blank',
+            baseSkill: false,
+            coords: {x: 0, y: 16},
+            numBefore: 1,
+            preReqLevels: [10],
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 17},
+            barSize: 2
+        },
+        {
+            skillID: 'penetrator',
+            baseSkill: false,
+            coords: {x: 0, y: 18},
+            numBefore: 1,
+            preReqLevels: [5]
+        },
+        {
+            skillID: 'point_blank',
+            baseSkill: false,
+            coords: {x: 0, y: 19},
+            numBefore: 1,
+            preReqLevels: [10],
+        },
+        {
+            skillID: 'take',
+            baseSkill: false,
+            coords: {x: 1, y: 17},
+        },
+        
     ],
     [ // Hexer
         {
