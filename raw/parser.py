@@ -117,7 +117,10 @@ def parse_table(table_node):
                 elt['levelspan'] = node.attrib.get('colspan')
                 elt['value'] = node.text
                 data.append(elt)
-            growth[label] = deepcopy(data)
+            if label not in growth:
+                growth[label] = deepcopy(data)
+            else:
+                growth[label].extend(data)
 
     output = {
         '_id': _id,
