@@ -111,7 +111,8 @@ def parse_table(table_node):
                 if node.tag == 'th' and label is None:
                     label = node.text
                     # print(label)
-                    growth_order.append(label)
+                    if label not in growth_order:
+                        growth_order.append(label)
                     continue
                 elt = {}
                 elt['levelspan'] = node.attrib.get('colspan')
