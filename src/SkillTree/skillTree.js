@@ -133,12 +133,23 @@ class SkillTree extends Component {
                               height: BOX_HEIGHT + 'px',
                               borderRadius: BOX_WIDTH / 12 + 'px'
                             }
-            output.push(<div key={datum.skillID + 'node'}
+            if (datum.skillID !== undefined) {
+                output.push(<div key={datum.skillID + 'node'}
                         className={className + ' skillNode'}
                         style={boxStyle}
                         onMouseEnter={() => {activeSkillMethod(datum.skillID, boxStyle, lineParams)}}
                         onMouseLeave={() => {activeSkillMethod(null, null, lineParams)}}>
                             {skillTreeNodes[datum.skillID]}</div>)
+            } else {
+                // Make this a horizontal line
+                boxStyle.height = null;
+                boxStyle.borderStyle = null;
+                boxStyle.borderTopStyle = 'solid';
+                boxStyle.borderRadius = null;
+                boxStyle.top = (yCoord + BOX_HEIGHT / 2) + 'px';
+                boxStyle.width = (BOX_WIDTH + BOX_BORDER_WIDTH * 2) + 'px';
+                output.push(<div className='horizontalBar' style={boxStyle}></div>)
+            }
 
             if (yCoord + 1.2 * (BOX_HEIGHT + BOX_PADDING) > getHeightMethod()) {
                 setHeightMethod(yCoord + 1.2 * (BOX_HEIGHT + BOX_PADDING))
