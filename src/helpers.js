@@ -27,7 +27,8 @@ function buildTextSkillTree(datum, hBarStyle, leftBar) {
         color: '#FFF',
         fontSize: FONT_SIZE + 'px',
         fontWeight: 'bold',
-        zIndex: 1
+        zIndex: 1,
+        textShadow: "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"
     }
 
     return <div style={textStyle} className='reqLevel'>{text}</div>
