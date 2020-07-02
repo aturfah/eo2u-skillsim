@@ -166,12 +166,13 @@ class Header extends Component {
         const imgStyle = {
             float: 'left',
             marginLeft: '5%',
+            width: '40%'
         }
 
         return <div className="HeaderBar">
             <div className="HeaderImg">
-                <a href="https://github.com/aturfah/eou-skillsim">
-                <img src="https://www.atlus.com/untold/images/main/main_06.png"  alt="alt_text" style={imgStyle}/>
+                <a href="https://github.com/aturfah/eo2u-skillsim">
+                <img src="https://atlus.com/untold2/images/logo.png"  alt="alt_text" style={imgStyle}/>
                 </a>
             </div>
             <div className="HeaderControls">
