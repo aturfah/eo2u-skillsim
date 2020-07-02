@@ -95,12 +95,19 @@ def parse_table(table_node):
             continue
 
         # Check for Levels
-        if not levels:
-            for node in row:
-                levels.append({
-                    'label': node.text,
-                    'width': node.attrib.get('style').replace('width:', '')
-                })
+        if row[0].tag == "th" and row[0].text == "Level":
+            if not levels:
+                for node in row:
+                    levels.append({
+                        'label': node.text,
+                        'width': node.attrib.get('style').replace('width:', '')
+                    })
+            else:
+                for node in row[1:]:
+                    levels.append({
+                        'label': node.text,
+                        'width': node.attrib.get('style').replace('width:', '')
+                    })
             continue
 
         # Get everything else
