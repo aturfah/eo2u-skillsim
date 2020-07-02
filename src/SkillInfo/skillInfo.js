@@ -53,7 +53,7 @@ function buildSkillText(skillDatum) {
     // Add line breaks at the end
     levelGrowth.forEach(function (val, idx) {
         const repVal = val.substring(0, val.length - 2);
-        if (idx + 1 <= skillDatum.max_level) {
+        if (idx + 1 <= skillDatum.max_level || skillDatum.force_boost === true || skillDatum.force_break === true) {
             levelGrowth[idx] = <span className='levelGrowthElt'>{repVal}<br/></span>;
         } else {
             levelGrowth[idx] = <i className='levelGrowthElt'>{repVal}<br/></i>;
