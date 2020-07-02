@@ -67,7 +67,11 @@ class SkillTreeNode extends Component {
                     <span className="ButtonText" onClick={() => this.minSkillLevel()}>(Lv. &dArr;)</span>
             </div>
         } else {
-            header = <i>{this.props.skillData.name}</i>
+            var boostText = "Force Break";
+            if (this.props.skillData.force_boost === true) {
+                boostText = "Force Boost"
+            }
+            header = <span className="forceSkill"> <b>{boostText}:<br /></b> <i>{this.props.skillData.name}</i></span>
         }
 
         return(<div style={nodeStyle} className="clickableNode NoHighlight" id={this.props.skillData._id}
