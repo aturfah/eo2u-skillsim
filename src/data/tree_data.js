@@ -776,7 +776,41 @@ const treeData = [
             coords: {x: 1, y: 14},
             numBefore: 1,
         },
-
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 15},
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'elem_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 16},
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'weapon_free',
+            baseSkill: false,
+            coords: {x: 1, y: 15},
+            numBefore: 2,
+        },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 17},
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: true,
+            coords: {x: 1, y: 17},
+        },
+        {
+            skillID: 'mine',
+            baseSkill: true,
+            coords: {x: 2, y: 17},
+        },
     ],
     [ // Gunner
         {
