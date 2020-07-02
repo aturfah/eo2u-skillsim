@@ -44,7 +44,6 @@ def parse_table(table_node):
     description = None
     force_boost = False
     force_break = False
-    max_level = None
 
     for row in table_node[0]:
         # Check for name
@@ -103,7 +102,6 @@ def parse_table(table_node):
                         'label': node.text,
                         'width': node.attrib.get('style').replace('width:', '')
                     })
-                max_level = len(levels) - 1
             else:
                 for node in row[1:]:
                     levels.append({
@@ -143,7 +141,7 @@ def parse_table(table_node):
         'growth_order': growth_order,
         'force_boost': force_boost,
         'force_break': force_break,
-        'max_level': max_level
+        'max_level': (len(levels) - 1) / 2
     }
 
     # print(output)
