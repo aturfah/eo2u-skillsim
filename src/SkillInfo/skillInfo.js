@@ -92,7 +92,7 @@ class SkillInfoPanel extends Component {
         super(props);
         this.activeClassIdx = props.activeClassIdx;
         this.parsedSkillData = parseSkillBranches(skillData[this.activeClassIdx])
-        this.maxWidth = 600;
+        this.maxWidth = 800;
     }
 
     render() {
@@ -122,8 +122,8 @@ class SkillInfoPanel extends Component {
             if (activeSkillID === 'strike_chaser') {
                 top = this.props.parentHeight - 550;
             }
-            else if (top + 250 > this.props.parentHeight) {
-                top = this.props.parentHeight - 250;
+            else if (top + 400 > this.props.parentHeight) {
+                top = this.props.parentHeight - 400;
             }
         }
 
