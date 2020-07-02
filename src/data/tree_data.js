@@ -3,13 +3,13 @@ const treeData = [
         {
             skillID: 'analysis',
             baseSkill: true,
-            forceSkill: true,
+            forceBoost: true,
             coords: {x: 0, y: 0}
         },
         {
             skillID: 'eschaton',
             baseSkill: true,
-            forceSkill: true,
+            forceBreak: true,
             coords: {x: 1, y: 0}
         },
         {
@@ -209,29 +209,33 @@ const treeData = [
 
     ],
     [ // Dark Hunter
+        
+        {
+            skillID: 'trance',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'rose_prison',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
         {
             skillID: 'whip_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 0},
+            coords: {x: 0, y: 1},
             barSize: 5
         },
         {
             skillID: 'gag',
             baseSkill: false,
-            coords: {x: 0, y: 1},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [1],
-            postReqLevels: [7],
-        },
-        {
-            skillID: 'shackles',
-            baseSkill: false,
             coords: {x: 0, y: 2},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [1],
-            postReqLevels: [7],
+            postReqLevels: [7]
         },
         {
             skillID: 'cuffs',
@@ -240,165 +244,176 @@ const treeData = [
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [1],
-            postReqLevels: [7],
+            postReqLevels: [7]
+        },
+        {
+            skillID: 'shackles',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [1],
+            postReqLevels: [7]
         },
         {
             skillID: 'ecstasy',
             baseSkill: false,
-            coords: {x: 1, y: 2},
-            numAfter: 0,
+            coords: {x: 1, y: 3},
             numBefore: 3,
             beforeStyle: 'centered'
         },
         {
             skillID: 'viper',
             baseSkill: false,
-            coords: {x: 0, y: 4},
-            numAfter: 2,
+            coords: {x: 0, y: 5},
             numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
-        },
+            preReqLevels: [5]
+        },        
         {
-            skillID: 'climax',
+            skillID: 'crimson_rouge',
             baseSkill: false,
-            coords: {x: 1, y: 5},
-            numAfter: 0,
+            coords: {x: 0, y: 6},
             numBefore: 1,
-            beforeSkip: 1,
-            preReqLevels: [10],
+            preReqLevels: [10]
         },
         {
             skillID: 'sword_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 6},
+            coords: {x: 0, y: 7},
             barSize: 5
         },
         {
             skillID: 'hypno_bite',
             baseSkill: false,
-            coords: {x: 0, y: 7},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [1],
-            postReqLevels: [7],
-        },
-        {
-            skillID: 'nerve_bite',
-            baseSkill: false,
             coords: {x: 0, y: 8},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [1],
-            postReqLevels: [7],
+            postReqLevels: [7]
         },
         {
-            skillID: 'mirage_bite',
+            skillID: 'nerve_bite',
             baseSkill: false,
             coords: {x: 0, y: 9},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [1],
-            postReqLevels: [7],
+            postReqLevels: [7]
+        },
+        {
+            skillID: 'mirage_bite',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [1],
+            postReqLevels: [7]
         },
         {
             skillID: 'soul_liberator',
             baseSkill: false,
-            coords: {x: 1, y: 8},
-            numAfter: 0,
+            coords: {x: 1, y: 9},
             numBefore: 3,
-            beforeStyle: 'centered',
+            beforeStyle: 'centered'
         },
         {
             skillID: 'drain_bite',
             baseSkill: false,
-            coords: {x: 0, y: 10},
-            numAfter: 2,
+            coords: {x: 0, y: 11},
             numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
-        },
+            preReqLevels: [5]
+        },        
         {
-            skillID: 'catastrophe',
+            skillID: 'scorpion',
             baseSkill: false,
-            coords: {x: 1, y: 11},
-            numAfter: 0,
-            numBefore: 1,
-            beforeSkip: 1,
-            preReqLevels: [10],
-        },
-        {
-            skillID: 'atk_up',
-            baseSkill: true,
             coords: {x: 0, y: 12},
-            barSize: 2
-        },
-        {
-            skillID: 'boost_up',
-            baseSkill: false,
-            coords: {x: 0, y: 13},
-            numAfter: 1,
             numBefore: 1,
-            preReqLevels: [3],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'wraths_might',
-            baseSkill: false,
-            coords: {x: 0, y: 14},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'bait',
-            baseSkill: false,
-            coords: {x: 1, y: 13},
-            numAfter: 0,
-            numBefore: 2,
-        },
-        {
-            skillID: 'tp_up',
-            baseSkill: true,
-            coords: {x: 0, y: 15},
-            barSize: 2
-        },
-        {
-            skillID: 'bind_heart',
-            baseSkill: false,
-            coords: {x: 0, y: 16},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [1],
-            postReqLevels: [2],
-        },
-        {
-            skillID: 'shadow_veil',
-            baseSkill: false,
-            coords: {x: 0, y: 17},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [3],
-            postReqLevels: [2],
-        },
-        {
-            skillID: 'dark_curse',
-            baseSkill: false,
-            coords: {x: 1, y: 16},
-            numAfter: 0,
-            numBefore: 2,
+            preReqLevels: [10]
         },
         {
             skillID: 'hp_up',
             baseSkill: true,
-            coords: {x: 0, y: 18}
+            coords: {x: 0, y: 13},
+            numAfter: 1,
+            numBefore: 0,
+            barSize: 0
         },
         {
-            skillID: 'take',
+            skillID: 'temptation',
+            baseSkill: false,
+            coords: {x: 1, y: 13},
+            numAfter: 0,
+            numBefore: 1,
+            preReqLevels: [4],
+        },
+        {
+            skillID: 'tp_up',
             baseSkill: true,
-            coords: {x: 1, y: 18}
-        }
+            coords: {x: 0, y: 14},
+            numAfter: 1,
+            numBefore: 0
+        },
+        {
+            skillID: 'bind_heart',
+            baseSkill: false,
+            coords: {x: 1, y: 14},
+            numAfter: 0,
+            numBefore: 1,
+            preReqLevels: [4],
+        },
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 15},
+            numAfter: 2,
+            numBefore: 0,
+            barSize: 2
+        },
+        {
+            skillID: 'attack_bait',
+            baseSkill: false,
+            coords: {x: 0, y: 16},
+            numAfter: 0,
+            numBefore: 1,
+            preReqLevels: [10],
+        },
+        {
+            skillID: 'elemental_bait',
+            baseSkill: false,
+            coords: {x: 0, y: 17},
+            numAfter: 0,
+            numBefore: 1,
+            preReqLevels: [10],
+        },
+        {
+            skillID: 'curb_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 18},
+            numAfter: 1,
+            numBefore: 0,
+        },
+        {
+            skillID: 'snake_eyes',
+            baseSkill: false,
+            coords: {x: 1, y: 18},
+            numAfter: 1,
+            numBefore: 1,
+            preReqLevels: [3],
+        },
+        {
+            skillID: 'perseverance',
+            baseSkill: false,
+            coords: {x: 2, y: 18},
+            numAfter: 0,
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'chop',
+            baseSkill: false,
+            coords: {x: 1, y: 15},
+            numAfter: 0
+        },
     ],
     [ // Fafnir
 
