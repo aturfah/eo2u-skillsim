@@ -11,10 +11,11 @@ function buildSkillText(skillDatum) {
 
     const header = <b className='SkillHeader'>{skillDatum.name}</b>
     var descr = skillDatum.description
+    var specialText = ""
 
     // Build Text for Skill Info
     const growthOrder = skillDatum.growth_order;
-    const levelGrowth = []
+    var levelGrowth = []
 
     // First initialize levelGrowth with 'Level #:' strings
     skillDatum.levels.forEach(function (level) {
@@ -59,7 +60,15 @@ function buildSkillText(skillDatum) {
         }
     })
 
-    return <div> {header} <br/> ---- <br/>
+    // Special Text for skill breaks
+    if (skillDatum.force_boost === true) {
+        specialText = "(FORCE BOOST)"
+        levelGrowth = []
+    } else if (skillDatum.force_break === true) {
+        specialText = "(FORCE BREAK)"
+    }
+
+    return <div> {header} {specialText} <br/> ---- <br/>
                 <span className='SkillDescr'>{descr}</span>
                 <br/> <br/>
                 {levelGrowth}
