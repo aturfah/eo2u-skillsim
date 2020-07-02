@@ -771,7 +771,7 @@ const treeData = [
             postReqLevels: [5]
         },
         {
-            skillID: 'force_charge',
+            skillID: 'limit_break',
             baseSkill: false,
             coords: {x: 1, y: 14},
             numBefore: 1,
@@ -1009,200 +1009,136 @@ const treeData = [
     ],
     [ // Hexer
         {
+            skillID: 'creeping_curse',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'black_mist',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
             skillID: 'curse_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 0},
-            barSize: 9,
-            numBefore: 0,
-            numAfter: 0
+            coords: {x: 0, y: 1},
+            barSize: 9
         },
         {
             skillID: 'sapping_curse',
             baseSkill: false,
-            coords: {x: 0, y: 1},
-            numAfter: 1,
+            coords: {x: 0, y: 2},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [1],
+            postReqLevels: [5]
         },
         {
             skillID: 'frailty_curse',
             baseSkill: false,
-            coords: {x: 0, y: 2},
+            coords: {x: 0, y: 3},
+            numBefore: 1,
             numAfter: 1,
-            numBefore: 1,
             preReqLevels: [1],
+            postReqLevels: [5]
         },
         {
-            skillID: 'leaden_curse',
-            baseSkill: false,
-            coords: {x: 1, y: 1},
-            numAfter: 2,
-            numBefore: 1,
-            preReqLevels: [2],
-            postReqLevels: [5],
-        },
-        {
-            skillID: 'deceit_curse',
+            skillID: 'weakening_curse',
             baseSkill: false,
             coords: {x: 1, y: 2},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [2],
-            postReqLevels: [5],
-        },
-        {
-            skillID: 'revenge_curse',
-            baseSkill: false,
-            coords: {x: 2, y: 1.5},
-            numAfter: 0,
-            numBefore: 1,
+            numBefore: 2,
         },
         {
             skillID: 'blinding_curse',
             baseSkill: false,
-            coords: {x: 0, y: 3},
-            numAfter: 2,
+            coords: {x: 0, y: 4},
             numBefore: 1,
+            numAfter: 3,
             preReqLevels: [3],
-            postReqLevels: [2],
+            postReqLevels: [2]
+        },
+        {
+            skillID: 'venom_curse',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [3],
+            postReqLevels: [2]
         },
         {
             skillID: 'madness_curse',
             baseSkill: false,
-            coords: {x: 0, y: 4},
-            numAfter: 2,
+            coords: {x: 0, y: 6},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [3],
-            postReqLevels: [3],
+            postReqLevels: [2]
         },
         {
             skillID: 'torpor_curse',
             baseSkill: false,
-            coords: {x: 0, y: 5},
-            numAfter: 1,
+            coords: {x: 1, y: 4.5},
             numBefore: 1,
-            preReqLevels: [3],
-            postReqLevels: [2],
         },
         {
             skillID: 'corrupt_curse',
             baseSkill: false,
-            coords: {x: 1, y: 3.5},
-            numAfter: 1,
+            coords: {x: 1, y: 5.5},
             numBefore: 1,
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'stoning_curse',
-            baseSkill: false,
-            coords: {x: 1, y: 4.5},
-            numAfter: 1,
-            numBefore: 1,
-            postReqLevels: [3],
-        },
-        {
-            skillID: 'relapse_curse',
-            baseSkill: false,
-            coords: {x: 2, y: 4},
-            numAfter: 0,
-            numBefore: 2,
-            beforeStyle: 'centered'
         },
         {
             skillID: 'cranial_curse',
             baseSkill: false,
-            coords: {x: 0, y: 6},
-            numAfter: 0,
+            coords: {x: 0, y: 7},
             numBefore: 1,
             preReqLevels: [5],
         },
         {
             skillID: 'abdomen_curse',
             baseSkill: false,
-            coords: {x: 0, y: 7},
-            numAfter: 0,
+            coords: {x: 0, y: 8},
             numBefore: 1,
             preReqLevels: [5],
         },
         {
             skillID: 'immobile_curse',
             baseSkill: false,
-            coords: {x: 0, y: 8},
-            numAfter: 0,
+            coords: {x: 0, y: 9},
             numBefore: 1,
-            preReqLevels: [5],
+            preReqLevels: [5]
         },
         {
             skillID: 'evil_eye',
             baseSkill: false,
-            coords: {x: 0, y: 9},
-            numAfter: 4,
+            coords: {x: 0, y: 10},
             numBefore: 1,
             preReqLevels: [10],
+            numAfter: 3
         },
         {
-            skillID: 'luring_whisper',
-            baseSkill: false,
-            coords: {x: 1, y: 9},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [1],
-        },
-        {
-            skillID: 'muting_word',
+            skillID: 'shielding_word',
             baseSkill: false,
             coords: {x: 1, y: 10},
-            numAfter: 0,
             numBefore: 1,
-            preReqLevels: [3],
+            preReqLevels: [1]
         },
         {
             skillID: 'conflict_word',
             baseSkill: false,
             coords: {x: 1, y: 11},
-            numAfter: 0,
             numBefore: 1,
-            preReqLevels: [5],
+            preReqLevels: [5]
         },
         {
             skillID: 'suicide_word',
             baseSkill: false,
             coords: {x: 1, y: 12},
-            numAfter: 0,
             numBefore: 1,
-            preReqLevels: [10],
+            preReqLevels: [10]
         },
-        {
-            skillID: 'tp_up',
-            baseSkill: true,
-            coords: {x: 0, y: 13},
-            numAfter: 1,
-            numBefore: 0,
-            barSize: 1
-        },
-        {
-            skillID: 'staggering_word',
-            baseSkill: false,
-            coords: {x: 0, y: 14},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [3],
-        },
-        {
-            skillID: 'hp_up',
-            baseSkill: false,
-            coords: {x: 1, y: 13},
-            numAfter: 0,
-            numBefore: 0,
-        },
-        {
-            skillID: 'chop',
-            baseSkill: false,
-            coords: {x: 2, y: 13},
-            numBefore: 0,
-            numAfter: 0
-        },
-        
     ],
     [ // Highlander
         {
