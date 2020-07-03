@@ -2355,7 +2355,7 @@ const treeData = [
             skillID: 'war_lore_mastery',
             baseSkill: true,
             coords: {x: 0, y: 1},
-            barSize: 9
+            barSize: 7
         },
         {
             skillID: 'war_heal',
@@ -2378,6 +2378,122 @@ const treeData = [
             skillID: 'war_heal_all',
             baseSkill: false,
             coords: {x: 2, y: 2},
+            numBefore: 1,
+        },
+        {
+            skillID: 'warmight',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
+            numBefore: 1,
+            preReqLevels: [3],
+        },
+        {
+            skillID: 'rockskin',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numBefore: 1,
+            preReqLevels: [3],
+        },
+        {
+            skillID: 'artery',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'war_response',
+            baseSkill: false,
+            coords: {x: 1, y: 5},
+            numBefore: 1,
+        },
+        {
+            skillID: 'random_disease',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            preReqLevels: [7],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'barrier',
+            baseSkill: false,
+            coords: {x: 1, y: 6},
+            numBefore: 2,
+        },
+        {
+            skillID: 'displace',
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            numBefore: 1,
+            preReqLevels: [7],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'war_revive',
+            baseSkill: false,
+            coords: {x: 0, y: 8},
+            numBefore: 1,
+            preReqLevels: [10],
+        },
+        {
+            skillID: 'war_edge_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 9},
+            barSize: 6
+        },
+        {
+            skillID: 'strength_slash',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [1],
+        },
+        {
+            skillID: 'guard_slash',
+            baseSkill: false,
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            preReqLevels: [1],
+        },
+        {
+            skillID: 'headcut',
+            baseSkill: false,
+            coords: {x: 0, y: 12},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'armcut',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'legcut',
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'ailing_slash',
+            baseSkill: false,
+            coords: {x: 0, y: 15},
+            numBefore: 1,
+            numAfter: 1,
+            preReqLevels: [10],
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'vampire',
+            baseSkill: false,
+            coords: {x: 1, y: 15},
             numBefore: 1,
         },
 
