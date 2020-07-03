@@ -144,7 +144,6 @@ class SkillTree extends Component {
                             {skillTreeNodes[datum.skillID]}</div>)
             } else {
                 // Make this a horizontal line
-                console.log(boxStyle)
                 boxStyle.height = undefined;
                 boxStyle.borderStyle = undefined;
                 boxStyle.borderRadius = undefined;
