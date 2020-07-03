@@ -2141,193 +2141,151 @@ const treeData = [
     ],
     [ // Troubadour
         {
+            skillID: 'war_song',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'crusade',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
             skillID: 'song_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 0},
+            coords: {x: 0, y: 1},
             barSize: 9
         },
         {
             skillID: 'warrior_song',
             baseSkill: false,
-            coords: {x: 0, y: 1},
-            numAfter: 1,
+            coords: {x: 0, y: 2},
             numBefore: 1,
             preReqLevels: [1],
-            postReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
             skillID: 'shelter_song',
             baseSkill: false,
-            coords: {x: 0, y: 2},
-            numAfter: 1,
+            coords: {x: 0, y: 3},
             numBefore: 1,
             preReqLevels: [1],
-            postReqLevels: [5],
-        },
-        {
-            skillID: 'holy_gift',
-            baseSkill: false,
-            coords: {x: 1, y: 1},
-            numAfter: 0,
-            numBefore: 2,
-        },
-        {
-            skillID: 'skanda_song',
-            baseSkill: false,
-            coords: {x: 0, y: 3},
             numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'energy_ensemble',
+            baseSkill: false,
+            coords: {x: 1, y: 2},
+            numBefore: 2,
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'lightfoot_melody',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
             numBefore: 1,
             preReqLevels: [3],
-            postReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
             skillID: 'insight_melody',
             baseSkill: false,
-            coords: {x: 0, y: 4},
-            numAfter: 1,
+            coords: {x: 0, y: 5},
             numBefore: 1,
             preReqLevels: [3],
-            postReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
-            skillID: 'recovery_aria',
+            skillID: 'skanda_ensemble',
             baseSkill: false,
-            coords: {x: 1, y: 3},
-            numAfter: 0,
+            coords: {x: 1, y: 4},
             numBefore: 2,
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
             skillID: 'fire_prelude',
             baseSkill: false,
-            coords: {x: 0, y: 5},
-            numAfter: 1,
+            coords: {x: 0, y: 6},
             numBefore: 1,
             preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
             skillID: 'flame_fantasia',
             baseSkill: false,
-            coords: {x: 1, y: 5},
-            numAfter: 0,
+            coords: {x: 1, y: 6},
             numBefore: 1,
-            preReqLevels: [3],
         },
         {
             skillID: 'ice_prelude',
             baseSkill: false,
-            coords: {x: 0, y: 6},
-            numAfter: 1,
+            coords: {x: 0, y: 7},
             numBefore: 1,
             preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
             skillID: 'frost_fantasia',
             baseSkill: false,
-            coords: {x: 1, y: 6},
-            numAfter: 0,
+            coords: {x: 1, y: 7},
             numBefore: 1,
-            preReqLevels: [3],
         },
         {
             skillID: 'volt_prelude',
             baseSkill: false,
-            coords: {x: 0, y: 7},
-            numAfter: 1,
+            coords: {x: 0, y: 8},
             numBefore: 1,
             preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
             skillID: 'shock_fantasia',
             baseSkill: false,
-            coords: {x: 1, y: 7},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [3],
-        },
-        {
-            skillID: 'echoing_rondo',
-            baseSkill: false,
-            coords: {x: 0, y: 8},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [7],
-        },
-        {
-            skillID: 'healing_lullaby',
-            baseSkill: false,
             coords: {x: 1, y: 8},
-            numAfter: 1,
             numBefore: 1,
-            preReqLevels: [3],
-            postReqLevels: [5],
-        },
-        {
-            skillID: 'eerie_chorus',
-            baseSkill: false,
-            coords: {x: 0, y: 9},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [10],
-        },
-        {
-            skillID: 'peace_ballad',
-            baseSkill: false,
-            coords: {x: 1, y: 9},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [5],
-        },
-        {
-            skillID: 'taboo_rondo',
-            baseSkill: false,
-            coords: {x: 2, y: 8},
-            numAfter: 0,
-            numBefore: 2,
-        },
-        {
-            skillID: 'hp_up',
-            baseSkill: true,
-            coords: {x: 0, y: 10},
-            barSize: 3
-        },
-        {
-            skillID: 'frightful_yawl',
-            baseSkill: false,
-            coords: {x: 0, y: 11},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [1],
-        },
-        {
-            skillID: 'restful_tune',
-            baseSkill: false,
-            coords: {x: 0, y: 12},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [3],
         },
         {
             skillID: 'barbaric_march',
             baseSkill: false,
-            coords: {x: 0, y: 13},
-            numAfter: 0,
+            coords: {x: 0, y: 9},
             numBefore: 1,
-            preReqLevels: [10],
+            preReqLevels: [7],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
-            skillID: 'tp_up',
+            skillID: 'life_ensemble',
             baseSkill: false,
-            coords: {x: 1, y: 10},
-            barSize: 0
+            coords: {x: 1, y: 9},
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
-            skillID: 'take',
+            skillID: 'health_requiem',
             baseSkill: false,
-            coords: {x: 1, y: 11},
-            barSize: 0
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [10]
         },
-        
+        {
+            skillID: 'reverb',
+            baseSkill: false,
+            coords: {x: 2, y: 5.5},
+            numBefore: 8,
+            beforeStyle: 'centered'
+        },
     ],
     [ // War Magus
 
