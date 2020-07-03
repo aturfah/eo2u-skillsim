@@ -1955,183 +1955,188 @@ const treeData = [
     ],
     [ // Survivalist
         {
+            skillID: 'illusion_step',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'summer_rain',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
             skillID: 'bow_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 0},
-            barSize: 3
-        },
-        {
-            skillID: 'power_shot',
-            baseSkill: false,
             coords: {x: 0, y: 1},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [1],
-            postReqLevels: [5],
+            barSize: 7
         },
         {
-            skillID: 'disabling_shot',
+            skillID: 'flank_shot',
             baseSkill: false,
             coords: {x: 0, y: 2},
-            numAfter: 1,
             numBefore: 1,
-            preReqLevels: [5],
-            postReqLevels: [3],
+            preReqLevels: [1]
         },
         {
-            skillID: 'multi-shot',
+            skillID: 'blind_arrow',
             baseSkill: false,
-            coords: {x: 1, y: 1},
-            numAfter: 0,
-            numBefore: 2,
+            coords: {x: 0, y: 3},
+            numBefore: 1,
+            preReqLevels: [3]
+        },
+        {
+            skillID: 'sleep_arrow',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numBefore: 1,
+            preReqLevels: [3]
+        },
+        {
+            skillID: 'paralysis_arrow',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            preReqLevels: [3]
+        },
+        {
+            skillID: 'drop_shot',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [5]
         },
         {
             skillID: 'sagittarius_shot',
             baseSkill: false,
-            coords: {x: 0, y: 3},
-            numAfter: 0,
+            coords: {x: 1, y: 6},
             numBefore: 1,
-            preReqLevels: [10],
+            preReqLevels: [5]
         },
         {
-            skillID: 'agi_up',
-            baseSkill: true,
-            coords: {x: 0, y: 4},
-            barSize: 5
-        },
-        {
-            skillID: 'hasten',
-            baseSkill: false,
-            coords: {x: 0, y: 5},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [1],
-            postReqLevels: [2],
-        },
-        {
-            skillID: 'trickery',
-            baseSkill: false,
-            coords: {x: 0, y: 6},
-            numAfter: 1,
-            numBefore: 1,
-            preReqLevels: [2],
-            postReqLevels: [2],
-        },
-        {
-            skillID: 'sure_shot',
+            skillID: 'multi-shot',
             baseSkill: false,
             coords: {x: 0, y: 7},
-            numAfter: 1,
             numBefore: 1,
-            preReqLevels: [3],
-            postReqLevels: [2],
+            preReqLevels: [7],
+            numAfter: 1,
+            postReqLevels: [2]
+        },
+        {
+            skillID: 'disabling_shot',
+            baseSkill: false,
+            coords: {x: 0, y: 8},
+            numBefore: 1,
+            preReqLevels: [10]
+        },
+        {
+            skillID: 'speed_up',
+            baseSkill: true,
+            coords: {x: 0, y: 9},
+            barSize: 4
+        },
+        {
+            skillID: 'trick_step',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [1]
         },
         {
             skillID: 'chain_dance',
             baseSkill: false,
-            coords: {x: 1, y: 6},
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            preReqLevels: [3],
             numAfter: 1,
-            numBefore: 3,
+            postReqLevels: [4]
+        },
+        {
+            skillID: 'scapegoat',
+            baseSkill: false,
+            coords: {x: 0, y: 12},
+            numBefore: 1,
+            preReqLevels: [7]
+        },
+        {
+            skillID: 'swap_step',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numBefore: 1,
+            preReqLevels: [10]
+        },
+        {
+            skillID: 'hazy_arrow',
+            baseSkill: false,
+            coords: {x: 1, y: 9},
+            numBefore: 5,
             beforeStyle: 'centered'
         },
         {
-            skillID: 'endorphins',
-            baseSkill: false,
-            coords: {x: 2, y: 6},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [5],
-        },
-        {
-            skillID: 'act_first',
-            baseSkill: false,
-            coords: {x: 0, y: 8},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [5],
-        },
-        {
-            skillID: 'quick_step',
-            baseSkill: false,
-            coords: {x: 0, y: 9},
-            numAfter: 0,
-            numBefore: 1,
-            preReqLevels: [10],
-        },
-        {
-            skillID: 'predator',
+            skillID: 'risk_perception',
             baseSkill: true,
-            coords: {x: 0, y: 10},
+            coords: {x: 0, y: 14},
             barSize: 3
         },
         {
             skillID: 'owl-eye',
             baseSkill: false,
-            coords: {x: 0, y: 11},
-            numAfter: 0,
+            coords: {x: 0, y: 15},
             numBefore: 1,
-            preReqLevels: [1],
+            preReqLevels: [1]
         },
         {
-            skillID: 'awareness',
+            skillID: 'sneak_attack',
             baseSkill: false,
-            coords: {x: 0, y: 12},
-            numAfter: 0,
+            coords: {x: 0, y: 16},
             numBefore: 1,
-            preReqLevels: [3],
+            preReqLevels: [3]
         },
         {
             skillID: 'stalker',
             baseSkill: false,
-            coords: {x: 0, y: 13},
-            numAfter: 0,
+            coords: {x: 0, y: 17},
             numBefore: 1,
-            preReqLevels: [5],
+            preReqLevels: [5]
         },
         {
             skillID: 'hp_up',
             baseSkill: true,
-            coords: {x: 0, y: 14},
+            coords: {x: 0, y: 18},
             numAfter: 1,
-            numBefore: 0,
-            barSize: 0
-        },
-        {
-            skillID: 'efficiency',
-            baseSkill: false,
-            coords: {x: 1, y: 14},
-            numBefore: 1,
-            numAfter: 1,
-            preReqLevels: [3],
+            postReqLevels: [3]
         },
         {
             skillID: 'resuscitate',
             baseSkill: false,
-            coords: {x: 2, y: 14},
-            numAfter: 0,
+            coords: {x: 1, y: 18},
             numBefore: 1,
-            preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
         },
         {
-            skillID: 'chop',
-            baseSkill: true,
-            coords: {x: 0, y: 15},
-            numAfter: 0,
-            numBefore: 0
+            skillID: 'efficiency',
+            baseSkill: false,
+            coords: {x: 2, y: 18},
+            numBefore: 1,
         },
         {
-            skillID: 'mine',
-            baseSkill: true,
-            coords: {x: 1, y: 15},
-            numAfter: 0,
-            numBefore: 0
+            skillID: 'tp_up',
+            baseSkill: false,
+            coords: {x: 0, y: 19},
         },
         {
-            skillID: 'take',
-            baseSkill: true,
-            coords: {x: 2, y: 15},
-            numAfter: 0,
-            numBefore: 0
+            skillID: 'curb_atk_up',
+            baseSkill: false,
+            coords: {x: 1, y: 19},
+        },
+        {
+            skillID: 'natural_instinct',
+            baseSkill: false,
+            coords: {x: 2, y: 19},
         },
     ],
     [ // Troubadour
