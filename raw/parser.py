@@ -62,13 +62,12 @@ def parse_table(table_node):
         
         # Check for force skill
         for node in row[0]:
-            if node.tag == "i" and ": Force Boost" in node.text:
-                force_boost = False
-                force_break = False
-            elif node.tag == "i" and "Force Boost" in node.text:
+            if node.tag == "i" and "Force Boost" in node.text and "Only" not in node.text:
                 force_boost = True
-            elif node.tag == "i" and "Force Break" in node.text:
+                print(node.text)
+            elif node.tag == "i" and "Force Break" in node.text and "Only" not in node.text:
                 force_break = True
+                print(node.text)
 
         # Check for Mastery and Prerequisites
         if mastery is None:
