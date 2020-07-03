@@ -28,11 +28,12 @@ class SkillTree extends Component {
         this._setActiveSkill = this._setActiveSkill.bind(this)
     }
 
-    _setActiveSkill(skillID, skillBoxInfo, graphParams) {
+    _setActiveSkill(skillID, skillBoxInfo, graphParams, displayPosn) {
         this.setState({
             activeSkillID: skillID,
             activeSkillBox: skillBoxInfo,
-            graphParams: graphParams
+            graphParams: graphParams,
+            displayPosn: displayPosn
         });
     }
 
@@ -133,12 +134,13 @@ class SkillTree extends Component {
                               height: BOX_HEIGHT + 'px',
                               borderRadius: BOX_WIDTH / 12 + 'px'
                             }
+            const displayPosn = datum.displayPosn || 'right'
             if (datum.skillID !== undefined) {
                 output.push(<div key={datum.skillID + 'node'}
                         className={className + ' skillNode'}
                         style={boxStyle}
-                        onMouseEnter={() => {activeSkillMethod(datum.skillID, boxStyle, lineParams)}}
-                        onMouseLeave={() => {activeSkillMethod(null, null, lineParams)}}>
+                        onMouseEnter={() => {activeSkillMethod(datum.skillID, boxStyle, lineParams, displayPosn)}}
+                        onMouseLeave={() => {activeSkillMethod(null, null, lineParams, null)}}>
                             {skillTreeNodes[datum.skillID]}</div>)
             } else {
                 // Make this a horizontal line
