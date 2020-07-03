@@ -2496,6 +2496,31 @@ const treeData = [
             coords: {x: 1, y: 15},
             numBefore: 1,
         },
+        {
+            skillID: 'hp_up',
+            baseSkill: false,
+            coords: {x: 0, y: 16},
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: false,
+            coords: {x: 1, y: 16},
+        },
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: false,
+            coords: {x: 0, y: 17},
+        },
+        {
+            skillID: 'curb_def_up',
+            baseSkill: false,
+            coords: {x: 1, y: 17},
+        },
+        {
+            skillID: 'chop',
+            baseSkill: false,
+            coords: {x: 2, y: 16},
+        },
 
     ]
 ]
