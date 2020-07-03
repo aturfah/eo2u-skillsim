@@ -2104,8 +2104,46 @@ const treeData = [
             numBefore: 1,
             preReqLevels: [10],
         },
-
-
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 15},
+            barSize: 2
+        },
+        {
+            skillID: 'royal_veil',
+            baseSkill: false,
+            coords: {x: 0, y: 16},
+            numBefore: 1,
+            preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'monarch_march',
+            baseSkill: false,
+            coords: {x: 1, y: 16},
+            numBefore: 2,
+        },
+        {
+            skillID: 'triumphant_cry',
+            baseSkill: false,
+            coords: {x: 0, y: 17},
+            numBefore: 1,
+            preReqLevels: [10],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'curb_def_up',
+            baseSkill: true,
+            coords: {x: 0, y: 18},
+        },
+        {
+            skillID: 'take',
+            baseSkill: false,
+            coords: {x: 1, y: 18},
+        },
     ],
     [ // Survivalist
         {
