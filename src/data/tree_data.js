@@ -2055,6 +2055,57 @@ const treeData = [
             numBefore: 1,
             preReqLevels: [10],
         },
+        {
+            skillID: 'tp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 9},
+            barSize: 5
+        },
+        {
+            skillID: 'link_order',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'link_order_ii',
+            baseSkill: false,
+            coords: {x: 1, y: 10},
+            numBefore: 1,
+        },
+        {
+            skillID: 'fire_circle',
+            baseSkill: false,
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'freeze_circle',
+            baseSkill: false,
+            coords: {x: 0, y: 12},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'shock_circle',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'cheer',
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numBefore: 1,
+            preReqLevels: [10],
+        },
+
+
     ],
     [ // Survivalist
         {
