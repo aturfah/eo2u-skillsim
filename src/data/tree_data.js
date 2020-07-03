@@ -2286,6 +2286,58 @@ const treeData = [
             numBefore: 8,
             beforeStyle: 'centered'
         },
+        {
+            skillID: 'speed_up',
+            baseSkill: true,
+            coords: {x: 0, y: 11},
+            barSize: 2
+        },
+        {
+            skillID: 'alluring_ballad',
+            baseSkill: false,
+            coords: {x: 0, y: 12},
+            numBefore: 1,
+            preReqLevels: [3],
+        },
+        {
+            skillID: 'jovial_march',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numBefore: 1,
+            preReqLevels: [7],
+        },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 14},
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'healing_rhythm',
+            baseSkill: false,
+            coords: {x: 1, y: 14},
+            numBefore: 1,
+        },
+        {
+            skillID: 'take',
+            baseSkill: false,
+            coords: {x: 2, y: 14},
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 15},
+            numAfter: 1,
+            postReqLevels: [10]
+        },
+        {
+            skillID: 'holy_gift',
+            baseSkill: false,
+            coords: {x: 1, y: 15},
+            numBefore: 1,
+        },
+
     ],
     [ // War Magus
 
