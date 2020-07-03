@@ -1951,7 +1951,110 @@ const treeData = [
         },
     ],
     [ // Sovereign
-
+        {
+            skillID: 'victory_vow',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'proof_of_nobility',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
+            skillID: 'order_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 1},
+            barSize: 7
+        },
+        {
+            skillID: 'attack_order',
+            baseSkill: false,
+            coords: {x: 0, y: 2},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'guard_order',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'dauntless_order',
+            baseSkill: false,
+            coords: {x: 1, y: 2},
+            numBefore: 2,
+        },
+        {
+            skillID: 'holy_crown',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numBefore: 1,
+            preReqLevels: [3],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'protect_order',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numBefore: 1,
+        },
+        {
+            skillID: 'ad_nihilo',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [2],
+            afterSkip: 1
+        },
+        {
+            skillID: 'clearance',
+            baseSkill: false,
+            coords: {x: 2, y: 5},
+            numBefore: 2,
+        },
+        {
+            skillID: 'negotiation',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            preReqLevels: [5],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'white_noble',
+            baseSkill: false,
+            coords: {x: 1, y: 6},
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [2]
+        },
+        {
+            skillID: 'prevent_order',
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            numBefore: 1,
+            preReqLevels: [7],
+        },
+        {
+            skillID: 'morale_boost',
+            baseSkill: false,
+            coords: {x: 0, y: 8},
+            numBefore: 1,
+            preReqLevels: [10],
+        },
     ],
     [ // Survivalist
         {
