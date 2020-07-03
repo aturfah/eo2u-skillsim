@@ -74,7 +74,6 @@ const treeData = [
             baseSkill: false,
             coords: {x: 2, y: 3},
             numBefore: 3,
-            preReqLevels: [5],
             beforeStyle: 'centered'
         },
         {
@@ -109,7 +108,6 @@ const treeData = [
             baseSkill: false,
             coords: {x: 1, y: 6},
             numBefore: 3,
-            preReqLevels: [5],
             beforeStyle: 'centered'
         },        
         {
@@ -151,14 +149,14 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 13},
             numBefore: 1,
-            preReqLevels: [1]
+            preReqLevels: [5]
         },
         {
             skillID: 'additional_palm',
             baseSkill: false,
             coords: {x: 0, y: 14},
             numBefore: 1,
-            preReqLevels: [1]
+            preReqLevels: [10]
         },
         {
             skillID: 'tp_up',
@@ -174,7 +172,7 @@ const treeData = [
             coords: {x: 0, y: 16},
             numAfter: 0,
             numBefore: 1,
-            preReqLevels: [3],
+            preReqLevels: [5],
         },
         {
             skillID: 'hp_up',
@@ -1453,7 +1451,7 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 5},
             numBefore: 1,
-            preReqLevels: [3],
+            preReqLevels: [5],
             numAfter: 1,
             postReqLevels: [3]
         },
