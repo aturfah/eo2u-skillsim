@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d77d94cc3ee8f25997841a2862bc2065",
+    "revision": "8cd652764046d1b289ef6aa12f016859",
     "url": "/eo2u-skillsim/index.html"
   },
   {
