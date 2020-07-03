@@ -144,10 +144,11 @@ class SkillTree extends Component {
                             {skillTreeNodes[datum.skillID]}</div>)
             } else {
                 // Make this a horizontal line
-                boxStyle.height = null;
-                boxStyle.borderStyle = null;
+                console.log(boxStyle)
+                boxStyle.height = undefined;
+                boxStyle.borderStyle = undefined;
+                boxStyle.borderRadius = undefined;
                 boxStyle.borderTopStyle = 'solid';
-                boxStyle.borderRadius = null;
                 boxStyle.top = (yCoord + BOX_HEIGHT / 2) + 'px';
                 boxStyle.width = (BOX_WIDTH + BOX_BORDER_WIDTH * 2) + 'px';
                 output.push(<div className='horizontalBar' style={boxStyle}></div>)
