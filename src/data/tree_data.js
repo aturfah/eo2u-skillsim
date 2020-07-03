@@ -2337,9 +2337,49 @@ const treeData = [
             coords: {x: 1, y: 15},
             numBefore: 1,
         },
-
     ],
     [ // War Magus
+        {
+            skillID: 'war_edge_power',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'fairy_robe',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
+            skillID: 'war_lore_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 1},
+            barSize: 9
+        },
+        {
+            skillID: 'war_heal',
+            baseSkill: false,
+            coords: {x: 0, y: 2},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'war_heal_line',
+            baseSkill: false,
+            coords: {x: 1, y: 2},
+            numBefore: 1,
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'war_heal_all',
+            baseSkill: false,
+            coords: {x: 2, y: 2},
+            numBefore: 1,
+        },
 
     ]
 ]
