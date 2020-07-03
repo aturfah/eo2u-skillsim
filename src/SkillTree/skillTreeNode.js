@@ -62,7 +62,7 @@ class SkillTreeNode extends Component {
         let levelInfo = <span></span>;
         let buttons = <div></div>
         if (this.props.skillData.force_boost === this.props.skillData.force_break) {
-            levelInfo = <span>Lv.{this.props.skillLevel}</span>
+            levelInfo = <span>Lv.{this.props.skillLevel}/{this.props.skillData.max_level}</span>;
             buttons = <div>
                     <span className="ButtonText" onClick={() => this.increaseSkillLevel()}>(Lv. &uarr;)</span> &nbsp;
                     <span className="ButtonText" onClick={() => this.maxSkillLevel()}>(Lv. &uArr;)</span> &nbsp;
