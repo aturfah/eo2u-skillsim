@@ -1195,8 +1195,6 @@ const treeData = [
         },
 
     ],
-    [ // Highlander
-    ],
     [ // Landsknecht
         {
             skillID: 'full_charge',
