@@ -106,23 +106,28 @@ class SkillInfoPanel extends Component {
         const graphParams = this.props.activeInfo.graphParams;
         const skillDatum = this.parsedSkillData[activeSkillID];
         const skillText = buildSkillText(skillDatum);
-
+        const displayPosn = this.props.activeInfo.displayPosn;
 
         var visibility = 'hidden';
         var left = -1;
         var top = -1;
         if (activeSkillID !== null) {
             visibility = 'visible'
-            left = parsePX(activeSkillBox.left) +
+            if (displayPosn === 'right') {
+                left = parsePX(activeSkillBox.left) +
                 (parsePX(graphParams.BOX_WIDTH) +
                 2 * parsePX(graphParams.BOX_BORDER_WIDTH) +
                 parsePX(graphParams.BOX_PADDING)) * 0.9 + 15;
+            } else {
+                left = parsePX(activeSkillBox.left) -
+                this.maxWidth / 2 -
+                2 * parsePX(graphParams.BOX_BORDER_WIDTH) -
+                parsePX(graphParams.BOX_PADDING);
+            }
+
             top = parsePX(activeSkillBox.top);
 
-            if (activeSkillID === 'strike_chaser') {
-                top = this.props.parentHeight - 550;
-            }
-            else if (top + 400 > this.props.parentHeight) {
+            if (top + 400 > this.props.parentHeight) {
                 top = this.props.parentHeight - 400;
             }
         }
