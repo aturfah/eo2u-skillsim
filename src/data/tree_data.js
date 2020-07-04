@@ -1197,32 +1197,90 @@ const treeData = [
     ],
     [ // Highlander
         {
-            skillID: 'steady_hands',
+            skillID: 'hero_battle',
             baseSkill: true,
             forceBoost: true,
             coords: {x: 0, y: 0}
         },
         {
-            skillID: 'medical_miracle',
+            skillID: 'gae_bolg',
             baseSkill: true,
             forceBreak: true,
             coords: {x: 1, y: 0}
         },
         {
-            skillID: 'heal_mastery',
+            skillID: 'spear_mastery',
             baseSkill: true,
             coords: {x: 0, y: 1},
             barSize: 6
         },
         {
-            skillID: 'cure',
+            skillID: 'long_thrust',
             baseSkill: false,
             coords: {x: 0, y: 2},
             numBefore: 1,
             preReqLevels: [1],
+        },
+        {
+            skillID: 'draining_thrust',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
+            numBefore: 1,
+            preReqLevels: [3],
             numAfter: 1,
             postReqLevels: [5]
         },
+        {
+            skillID: 'draining_burst',
+            baseSkill: false,
+            coords: {x: 1, y: 3},
+            numBefore: 1,
+        },
+        {
+            skillID: 'legion_thrust',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numBefore: 1,
+            preReqLevels: [3],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'legion_burst',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numBefore: 1,
+        },
+        {
+            skillID: 'head_pierce',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'spear_assist',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            preReqLevels: [7],
+        },
+        {
+            skillID: 'delayed_charge',
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            numBefore: 1,
+            preReqLevels: [10],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'cross_charge',
+            baseSkill: false,
+            coords: {x: 1, y: 7},
+            numBefore: 1
+        },
+
     ],
     [ // Landsknecht
         {
