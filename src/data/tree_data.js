@@ -1280,6 +1280,43 @@ const treeData = [
             coords: {x: 1, y: 7},
             numBefore: 1
         },
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 8},
+            barSize: 3
+        },
+        {
+            skillID: 'turning_tide',
+            baseSkill: false,
+            coords: {x: 0, y: 9},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'bloody_offense',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [3],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'bloodlust',
+            baseSkill: false,
+            coords: {x: 1, y: 9},
+            numBefore: 2
+        },
+        {
+            skillID: 'stigmata',
+            baseSkill: false,
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
 
     ],
     [ // Landsknecht
