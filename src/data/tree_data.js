@@ -1317,6 +1317,73 @@ const treeData = [
             numBefore: 1,
             preReqLevels: [5],
         },
+        {
+            skillID: 'phys_def_up',
+            baseSkill: true,
+            coords: {x: 0, y: 12},
+            barSize: 3
+        },
+        {
+            skillID: 'battle_instinct',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'blood_fortune',
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numBefore: 1,
+            preReqLevels: [3],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'allied_bonds',
+            baseSkill: false,
+            coords: {x: 1, y: 13},
+            numBefore: 2
+        },
+        {
+            skillID: 'spirit_shield',
+            baseSkill: false,
+            coords: {x: 0, y: 15},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 16},
+            barSize: 2
+        },
+        {
+            skillID: 'limitless',
+            baseSkill: false,
+            coords: {x: 0, y: 17},
+            numBefore: 1,
+            preReqLevels: [1],
+        },
+        {
+            skillID: 'black_sabbath',
+            baseSkill: false,
+            coords: {x: 0, y: 18},
+            numBefore: 1,
+            preReqLevels: [10]
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: false,
+            coords: {x: 1, y: 16},
+        },
+        {
+            skillID: 'mine',
+            baseSkill: false,
+            coords: {x: 1, y: 17},
+        },
 
     ],
     [ // Landsknecht
