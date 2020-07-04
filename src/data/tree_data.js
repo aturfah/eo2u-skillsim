@@ -1226,7 +1226,7 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 3},
             numBefore: 1,
-            preReqLevels: [3],
+            preReqLevels: [2],
             numAfter: 1,
             postReqLevels: [5]
         },
@@ -1241,7 +1241,7 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 4},
             numBefore: 1,
-            preReqLevels: [3],
+            preReqLevels: [2],
             numAfter: 1,
             postReqLevels: [5]
         },
@@ -1256,14 +1256,14 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 5},
             numBefore: 1,
-            preReqLevels: [5],
+            preReqLevels: [3],
         },
         {
             skillID: 'spear_assist',
             baseSkill: false,
             coords: {x: 0, y: 6},
             numBefore: 1,
-            preReqLevels: [7],
+            preReqLevels: [5],
         },
         {
             skillID: 'delayed_charge',
@@ -1272,7 +1272,7 @@ const treeData = [
             numBefore: 1,
             preReqLevels: [10],
             numAfter: 1,
-            postReqLevels: [5]
+            postReqLevels: [3]
         },
         {
             skillID: 'cross_charge',
