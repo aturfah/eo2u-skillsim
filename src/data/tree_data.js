@@ -1195,6 +1195,197 @@ const treeData = [
         },
 
     ],
+    [ // Highlander
+        {
+            skillID: 'hero_battle',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'gae_bolg',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
+            skillID: 'spear_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 1},
+            barSize: 6
+        },
+        {
+            skillID: 'long_thrust',
+            baseSkill: false,
+            coords: {x: 0, y: 2},
+            numBefore: 1,
+            preReqLevels: [1],
+        },
+        {
+            skillID: 'draining_thrust',
+            baseSkill: false,
+            coords: {x: 0, y: 3},
+            numBefore: 1,
+            preReqLevels: [2],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'draining_burst',
+            baseSkill: false,
+            coords: {x: 1, y: 3},
+            numBefore: 1,
+        },
+        {
+            skillID: 'legion_thrust',
+            baseSkill: false,
+            coords: {x: 0, y: 4},
+            numBefore: 1,
+            preReqLevels: [2],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+        {
+            skillID: 'legion_burst',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numBefore: 1,
+        },
+        {
+            skillID: 'head_pierce',
+            baseSkill: false,
+            coords: {x: 0, y: 5},
+            numBefore: 1,
+            preReqLevels: [3],
+        },
+        {
+            skillID: 'spear_assist',
+            baseSkill: false,
+            coords: {x: 0, y: 6},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'delayed_charge',
+            baseSkill: false,
+            coords: {x: 0, y: 7},
+            numBefore: 1,
+            preReqLevels: [10],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'cross_charge',
+            baseSkill: false,
+            coords: {x: 1, y: 7},
+            numBefore: 1
+        },
+        {
+            skillID: 'phys_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 8},
+            barSize: 3
+        },
+        {
+            skillID: 'turning_tide',
+            baseSkill: false,
+            coords: {x: 0, y: 9},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'bloody_offense',
+            baseSkill: false,
+            coords: {x: 0, y: 10},
+            numBefore: 1,
+            preReqLevels: [3],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'bloodlust',
+            baseSkill: false,
+            coords: {x: 1, y: 9},
+            numBefore: 2
+        },
+        {
+            skillID: 'stigmata',
+            baseSkill: false,
+            coords: {x: 0, y: 11},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'phys_def_up',
+            baseSkill: true,
+            coords: {x: 0, y: 12},
+            barSize: 3
+        },
+        {
+            skillID: 'battle_instinct',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'blood_fortune',
+            baseSkill: false,
+            coords: {x: 0, y: 14},
+            numBefore: 1,
+            preReqLevels: [3],
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
+            skillID: 'allied_bonds',
+            baseSkill: false,
+            coords: {x: 1, y: 13},
+            numBefore: 2
+        },
+        {
+            skillID: 'spirit_shield',
+            baseSkill: false,
+            coords: {x: 0, y: 15},
+            numBefore: 1,
+            preReqLevels: [5],
+        },
+        {
+            skillID: 'hp_up',
+            baseSkill: true,
+            coords: {x: 0, y: 16},
+            barSize: 2
+        },
+        {
+            skillID: 'limitless',
+            baseSkill: false,
+            coords: {x: 0, y: 17},
+            numBefore: 1,
+            preReqLevels: [1],
+        },
+        {
+            skillID: 'black_sabbath',
+            baseSkill: false,
+            coords: {x: 0, y: 18},
+            numBefore: 1,
+            preReqLevels: [10]
+        },
+        {
+            skillID: 'tp_up',
+            baseSkill: false,
+            coords: {x: 1, y: 16},
+        },
+        {
+            skillID: 'mine',
+            baseSkill: false,
+            coords: {x: 1, y: 17},
+        },
+
+    ],
     [ // Landsknecht
         {
             skillID: 'full_charge',
