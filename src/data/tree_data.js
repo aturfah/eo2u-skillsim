@@ -1195,6 +1195,35 @@ const treeData = [
         },
 
     ],
+    [ // Highlander
+        {
+            skillID: 'steady_hands',
+            baseSkill: true,
+            forceBoost: true,
+            coords: {x: 0, y: 0}
+        },
+        {
+            skillID: 'medical_miracle',
+            baseSkill: true,
+            forceBreak: true,
+            coords: {x: 1, y: 0}
+        },
+        {
+            skillID: 'heal_mastery',
+            baseSkill: true,
+            coords: {x: 0, y: 1},
+            barSize: 6
+        },
+        {
+            skillID: 'cure',
+            baseSkill: false,
+            coords: {x: 0, y: 2},
+            numBefore: 1,
+            preReqLevels: [1],
+            numAfter: 1,
+            postReqLevels: [5]
+        },
+    ],
     [ // Landsknecht
         {
             skillID: 'full_charge',
