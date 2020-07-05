@@ -14,10 +14,18 @@ function buildTextSkillTree(datum, hBarStyle, leftBar) {
     var text = null;
     if (leftBar === true) {
         textLeft = parsePX(hBarStyle.left)
-        text = 'Lv.' + datum.preReqLevels[0]
+        if (isNumber(datum.preReqLevels[0])) {
+            text = 'Lv.' + datum.preReqLevels[0]
+        } else {
+            text = datum.preReqLevels[0]
+        }
     } else {
         textLeft = parsePX(hBarStyle.left) + parsePX(hBarStyle.width)
-        text = 'Lv.' + datum.postReqLevels[0]
+        if (isNumber(datum.postReqLevels[0])) {
+            text = 'Lv.' + datum.postReqLevels[0]
+        } else {
+            text = datum.postReqLevels[0]
+        }
     }
     textLeft -= WIDTH / 1.5
 
