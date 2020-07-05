@@ -44,6 +44,8 @@ def parse_table(table_node):
     description = None
     force_boost = False
     force_break = False
+    transform_only = False
+    linked_skill = None
 
     for row in table_node[0]:
         # Check for name
@@ -64,10 +66,15 @@ def parse_table(table_node):
         for node in row[0]:
             if node.tag == "i" and "Force Boost" in node.text and "Only" not in node.text:
                 force_boost = True
-                print(node.text)
             elif node.tag == "i" and "Force Break" in node.text and "Only" not in node.text:
                 force_break = True
-                print(node.text)
+            elif node.text is not None and transform_only == True:
+                matches = re.findall('replaces (.+) during transform;', node.text.lower())
+                if not matches:
+                    continue
+                linked_skill = matches[0].replace(' ', '_')
+            elif node.text is not None and 'transformation only' in node.text.lower():
+                transform_only = True
 
         # Check for Mastery and Prerequisites
         if mastery is None:
@@ -143,6 +150,8 @@ def parse_table(table_node):
         'growth_order': growth_order,
         'force_boost': force_boost,
         'force_break': force_break,
+        'transform_only': transform_only,
+        'linked_skill': linked_skill,
         'max_level': (len(levels) - 1) / 2
     }
 
