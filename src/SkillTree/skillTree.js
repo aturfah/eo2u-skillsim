@@ -197,6 +197,8 @@ class SkillTree extends Component {
             minWidth: this._getWidth()
         }
 
+        console.log(skillData[this.props.activeClassIdx])
+
         return <div className="SkillTree" style={divStyle}>
             {doot}
             <SkillInfoPanel
