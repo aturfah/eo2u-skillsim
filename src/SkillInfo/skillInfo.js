@@ -66,6 +66,8 @@ function buildSkillText(skillDatum) {
         levelGrowth = []
     } else if (skillDatum.force_break === true) {
         specialText = "(FORCE BREAK)"
+    } else if (skillDatum.transform_only === true) {
+        specialText = "(TRANSFORM ONLY)"
     }
 
     return <div> {header} {specialText} <br/> ---- <br/>
