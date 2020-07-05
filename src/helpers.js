@@ -1,6 +1,7 @@
 import React from 'react';
 import masterySkills from './data/mastery_skills';
 import prereqData from './data/prereq_data';
+import skillData from './data/skill_data';
 
 export function parsePX (pxStr) {
     return parseInt(String(pxStr).replace('px', ''));
@@ -238,6 +239,39 @@ export function objCompare(objA, objB) {
     return outputFlag;
 }
 
+export function parseSkillBranches(classSkillInfo) {
+    const output = {};
+    classSkillInfo.branches.forEach(function (branch) {
+        branch.skill_data.forEach(function (skillDatum) {
+            output[skillDatum._id] = skillDatum;
+        });
+    });
+
+    return output;
+}
+
+function fixLinkedSkills(chosenSkills, activeClassIdx) {
+    let newChosenSkills = deepCopy(chosenSkills);
+    let parsedSkillData = parseSkillBranches(skillData[activeClassIdx])
+
+    Object.keys(parsedSkillData).forEach(function (skillId) {
+        let skillInfo = parsedSkillData[skillId]
+        let linkedSkill = skillInfo.linked_skill
+
+        if (linkedSkill !== null && Object.keys(newChosenSkills).includes(linkedSkill)) {
+            newChosenSkills[skillId] = newChosenSkills[linkedSkill]
+        } else if (linkedSkill !== null && !Object.keys(newChosenSkills).includes(linkedSkill)) {
+            newChosenSkills[skillId] = newChosenSkills[linkedSkill] = 0
+        }
+    })
+
+    if (objCompare(newChosenSkills, chosenSkills)) {
+        return -1
+    } else {
+        return newChosenSkills
+    }
+}
+
 function verifySkillDependenciesAdd(chosenSkills, activeClassIdx) {
     let newChosenSkills = deepCopy(chosenSkills);
 
@@ -292,6 +326,15 @@ export function fixSkillDependencyAdd(chosenSkills, activeClassIdx) {
         chosenSkills = temp;
         temp = verifySkillDependenciesAdd(temp, activeClassIdx);
     }
+
+    fixMasterySkills(chosenSkills, activeClassIdx)
+
+    temp = fixLinkedSkills(chosenSkills, activeClassIdx);
+    while (temp !== -1) {
+        chosenSkills = temp;
+        temp = fixLinkedSkills(chosenSkills, activeClassIdx)
+    }
+
     fixMasterySkills(chosenSkills, activeClassIdx)
 
     return chosenSkills
@@ -329,6 +372,14 @@ export function fixSkillDependencyDelete(chosenSkills, activeClassIdx) {
     while (temp !== -1) {
         chosenSkills = temp;
         temp = verifySkillDependenciesDel(chosenSkills, activeClassIdx);
+    }
+
+    fixMasterySkills(chosenSkills, activeClassIdx)
+
+    temp = fixLinkedSkills(chosenSkills, activeClassIdx);
+    while (temp !== -1) {
+        chosenSkills = temp;
+        temp = fixLinkedSkills(chosenSkills, activeClassIdx)
     }
 
     fixMasterySkills(chosenSkills, activeClassIdx)
