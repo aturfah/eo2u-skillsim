@@ -73,7 +73,7 @@ def parse_table(table_node):
                 if not matches:
                     continue
                 linked_skill = matches[0].replace(' ', '_')
-            elif node.text is not None and 'transformation only' in node.text.lower():
+            elif node.text is not None and 'transformation' in node.text.lower():
                 transform_only = True
 
         # Check for Mastery and Prerequisites
