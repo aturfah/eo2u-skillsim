@@ -261,7 +261,8 @@ function fixLinkedSkills(chosenSkills, activeClassIdx) {
         if (linkedSkill !== null && Object.keys(newChosenSkills).includes(linkedSkill)) {
             newChosenSkills[skillId] = newChosenSkills[linkedSkill]
         } else if (linkedSkill !== null && !Object.keys(newChosenSkills).includes(linkedSkill)) {
-            newChosenSkills[skillId] = newChosenSkills[linkedSkill] = 0
+            delete newChosenSkills[skillId]
+            delete newChosenSkills[linkedSkill]
         }
     })
 
