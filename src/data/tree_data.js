@@ -709,7 +709,15 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 6},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [5]
+        },
+        {
+            skillID: 'blade_recoil',
+            baseSkill: false,
+            coords: {x: 1, y: 6},
+            numBefore: 1,
+            preReqLevels: ['Force']
         },
         {
             skillID: 'overkiller',
