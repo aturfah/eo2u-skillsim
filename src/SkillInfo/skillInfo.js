@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './skillInfo.css'
 
 import skillData from '../data/skill_data';
-import {parsePX} from '../helpers';
+import {parsePX, parseSkillBranches} from '../helpers';
 
 function buildSkillText(skillDatum) {
     if (skillDatum === undefined) {
@@ -75,17 +75,6 @@ function buildSkillText(skillDatum) {
                 <br/> <br/>
                 {levelGrowth}
             </div>
-}
-
-function parseSkillBranches(classSkillInfo) {
-    const output = {};
-    classSkillInfo.branches.forEach(function (branch) {
-        branch.skill_data.forEach(function (skillDatum) {
-            output[skillDatum._id] = skillDatum;
-        });
-    });
-
-    return output;
 }
 
 class SkillInfoPanel extends Component {
