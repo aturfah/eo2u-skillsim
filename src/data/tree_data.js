@@ -664,7 +664,16 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 3},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [3]
+        },
+        {
+            skillID: 'fire_wave',
+            baseSkill: false,
+            coords: {x: 1, y: 3},
+            numBefore: 1,
+            preReqLevels: ['Force'],
+            linkedSkill: ['flame_sabre']
         },
         {
             skillID: 'freeze_sabre',
