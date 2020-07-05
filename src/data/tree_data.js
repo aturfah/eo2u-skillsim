@@ -679,14 +679,30 @@ const treeData = [
             baseSkill: false,
             coords: {x: 0, y: 4},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [3]
+        },
+        {
+            skillID: 'ice_wave',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numBefore: 1,
+            preReqLevels: ['Force']
         },
         {
             skillID: 'shock_sabre',
             baseSkill: false,
             coords: {x: 0, y: 5},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [3]
+        },
+        {
+            skillID: 'thunder_wave',
+            baseSkill: false,
+            coords: {x: 1, y: 5},
+            numBefore: 1,
+            preReqLevels: ['Force']
         },
         {
             skillID: 'delayed_chase',
