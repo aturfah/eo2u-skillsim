@@ -260,7 +260,6 @@ export function linkedSkills(activeClassIdx) {
 
         if (linkedSkill !== null) {
             output.push(skillId)
-            console.log(skillId)
         }
     })
 

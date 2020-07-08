@@ -45,8 +45,6 @@ class App extends Component {
       totalSpSpent += skillsChosen[key];
     });
 
-    console.log(activeFDegSkills)
-    console.log(totalSpSpent - activeFDegSkills.length)
     return sp - totalSpSpent + activeFDegSkills.length
 }
 
@@ -95,8 +93,6 @@ class App extends Component {
       console.log('Setting', key, 'to', value)
       oldState[key] = value;
     }
-
-    console.log(oldState)
 
     const spRemaining = this.calculateSpRemaining(oldState)
     if (spRemaining < 0) {

@@ -110,7 +110,6 @@ class SkillTree extends Component {
         const activeSkillMethod = this._setActiveSkill;
 
         skillTreeStructure.forEach(function (datum) {
-            // console.log(datum.skillID)
             var className = 'baseSkill';
             var xOffset = 0;
             var xCoord = null;
@@ -196,8 +195,6 @@ class SkillTree extends Component {
             height: this._getHeight(),
             minWidth: this._getWidth()
         }
-
-        console.log(skillData[this.props.activeClassIdx])
 
         return <div className="SkillTree" style={divStyle}>
             {doot}

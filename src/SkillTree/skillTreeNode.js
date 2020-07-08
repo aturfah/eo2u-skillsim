@@ -13,7 +13,6 @@ class SkillTreeNode extends Component {
     }
 
     increaseSkillLevel() {
-        console.log(this.props.skillData)
         if (this.props.skillLevel < this.props.skillData.max_level) {
             this.incrementSkillLevel(1)
         }
@@ -46,7 +45,6 @@ class SkillTreeNode extends Component {
     }
 
     render() {
-        // console.log(this.props)
         let header = <span>{this.props.skillData.name}</span>;
         let nodeColor = '#f5bdc6';
         let textColor = 'black';
