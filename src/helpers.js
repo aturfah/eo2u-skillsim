@@ -250,6 +250,23 @@ export function parseSkillBranches(classSkillInfo) {
     return output;
 }
 
+export function linkedSkills(activeClassIdx) {
+    let parsedSkillData = parseSkillBranches(skillData[activeClassIdx])
+    const output = []
+
+    Object.keys(parsedSkillData).forEach(function (skillId) {
+        let skillInfo = parsedSkillData[skillId]
+        let linkedSkill = skillInfo.linked_skill
+
+        if (linkedSkill !== null) {
+            output.push(skillId)
+            console.log(skillId)
+        }
+    })
+
+    return output
+}
+
 function fixLinkedSkills(chosenSkills, activeClassIdx) {
     let newChosenSkills = deepCopy(chosenSkills);
     let parsedSkillData = parseSkillBranches(skillData[activeClassIdx])
