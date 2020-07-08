@@ -46,6 +46,7 @@ def parse_table(table_node):
     force_break = False
     transform_only = False
     linked_skill = None
+    no_level = False
 
     for row in table_node[0]:
         # Check for name
@@ -139,6 +140,11 @@ def parse_table(table_node):
             else:
                 growth[label].extend(data)
 
+
+    fafnir_special_skills = ['meteor_smash', 'power_cell', 'extend', 'self-regenerate', 'accelerate']
+    if linked_skill or force_boost or force_break or _id in fafnir_special_skills:
+        no_level = True
+
     output = {
         '_id': _id,
         'name': name,
@@ -152,7 +158,8 @@ def parse_table(table_node):
         'force_break': force_break,
         'transform_only': transform_only,
         'linked_skill': linked_skill,
-        'max_level': (len(levels) - 1) / 2
+        'max_level': (len(levels) - 1) / 2,
+        'no_level': no_level
     }
 
     # print(output)
