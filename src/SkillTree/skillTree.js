@@ -110,7 +110,6 @@ class SkillTree extends Component {
         const activeSkillMethod = this._setActiveSkill;
 
         skillTreeStructure.forEach(function (datum) {
-            // console.log(datum.skillID)
             var className = 'baseSkill';
             var xOffset = 0;
             var xCoord = null;

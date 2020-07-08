@@ -44,6 +44,9 @@ def parse_table(table_node):
     description = None
     force_boost = False
     force_break = False
+    transform_only = False
+    linked_skill = None
+    no_level = False
 
     for row in table_node[0]:
         # Check for name
@@ -64,10 +67,15 @@ def parse_table(table_node):
         for node in row[0]:
             if node.tag == "i" and "Force Boost" in node.text and "Only" not in node.text:
                 force_boost = True
-                print(node.text)
             elif node.tag == "i" and "Force Break" in node.text and "Only" not in node.text:
                 force_break = True
-                print(node.text)
+            elif node.text is not None and transform_only == True:
+                matches = re.findall('replaces (.+) during transform;', node.text.lower())
+                if matches:
+                    linked_skill = matches[0].replace(' ', '_')
+                    prerequisites = [{'_id': linked_skill, 'level': 1}]
+            elif node.text is not None and 'transformation' in node.text.lower():
+                transform_only = True
 
         # Check for Mastery and Prerequisites
         if mastery is None:
@@ -79,7 +87,7 @@ def parse_table(table_node):
                     description = node.text.strip()
                 elif node.tag == 'p' and description:
                     prereq_check = True
-                if prereq_check and node.tag == 'ul':
+                if prereq_check and node.tag == 'ul' and not transform_only:
                     prereq_check = False
                     for li_elt in node:
                         raw_prereq = li_elt.text
@@ -132,6 +140,11 @@ def parse_table(table_node):
             else:
                 growth[label].extend(data)
 
+
+    fafnir_special_skills = ['meteor_smash', 'power_cell', 'extend', 'self-regenerate', 'accelerate']
+    if linked_skill or force_boost or force_break or _id in fafnir_special_skills:
+        no_level = True
+
     output = {
         '_id': _id,
         'name': name,
@@ -143,7 +156,10 @@ def parse_table(table_node):
         'growth_order': growth_order,
         'force_boost': force_boost,
         'force_break': force_break,
-        'max_level': (len(levels) - 1) / 2
+        'transform_only': transform_only,
+        'linked_skill': linked_skill,
+        'max_level': (len(levels) - 1) / 2,
+        'no_level': no_level
     }
 
     # print(output)

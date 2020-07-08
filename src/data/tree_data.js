@@ -639,15 +639,41 @@ const treeData = [
             coords: {x: 2, y: 0}
         },
         {
+            skillID: 'meteor_smash',
+            baseSkill: true,
+            coords: {x: 0, y: 1}
+        },
+        {
+            skillID: 'power_cell',
+            baseSkill: true,
+            coords: {x: 1, y: 1}
+        },
+        {
+            skillID: 'extend',
+            baseSkill: true,
+            coords: {x: 2, y: 1}
+        },
+        {
+            skillID: 'self-regenerate',
+            baseSkill: true,
+            coords: {x: 3, y: 1}
+        },
+        {
+            skillID: 'accelerate',
+            baseSkill: true,
+            coords: {x: 4, y: 1},
+            displayPosn: "left"
+        },
+        {
             skillID: 'blade_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 1},
+            coords: {x: 0, y: 2},
             barSize: 7
         },
         {
             skillID: 'sonic_raid',
             baseSkill: false,
-            coords: {x: 0, y: 2},
+            coords: {x: 0, y: 3},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [1],
@@ -656,41 +682,73 @@ const treeData = [
         {
             skillID: 'gale_rush',
             baseSkill: false,
-            coords: {x: 1, y: 2},
+            coords: {x: 1, y: 3},
             numBefore: 1,
         },
         {
             skillID: 'flame_sabre',
             baseSkill: false,
-            coords: {x: 0, y: 3},
+            coords: {x: 0, y: 4},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [3]
+        },
+        {
+            skillID: 'fire_wave',
+            baseSkill: false,
+            coords: {x: 1, y: 4},
+            numBefore: 1,
+            preReqLevels: ['Force']
         },
         {
             skillID: 'freeze_sabre',
             baseSkill: false,
-            coords: {x: 0, y: 4},
+            coords: {x: 0, y: 5},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [3]
+        },
+        {
+            skillID: 'ice_wave',
+            baseSkill: false,
+            coords: {x: 1, y: 5},
+            numBefore: 1,
+            preReqLevels: ['Force']
         },
         {
             skillID: 'shock_sabre',
             baseSkill: false,
-            coords: {x: 0, y: 5},
+            coords: {x: 0, y: 6},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [3]
+        },
+        {
+            skillID: 'thunder_wave',
+            baseSkill: false,
+            coords: {x: 1, y: 6},
+            numBefore: 1,
+            preReqLevels: ['Force']
         },
         {
             skillID: 'delayed_chase',
             baseSkill: false,
-            coords: {x: 0, y: 6},
+            coords: {x: 0, y: 7},
             numBefore: 1,
+            numAfter: 1,
             preReqLevels: [5]
+        },
+        {
+            skillID: 'blade_recoil',
+            baseSkill: false,
+            coords: {x: 1, y: 7},
+            numBefore: 1,
+            preReqLevels: ['Force']
         },
         {
             skillID: 'overkiller',
             baseSkill: false,
-            coords: {x: 0, y: 7},
+            coords: {x: 0, y: 8},
             numBefore: 1,
             numAfter: 1,
             preReqLevels: [7],
@@ -699,40 +757,40 @@ const treeData = [
         {
             skillID: 'full_slash',
             baseSkill: false,
-            coords: {x: 1, y: 7},
+            coords: {x: 1, y: 8},
             numBefore: 1
         },
         {
             skillID: 'resonance',
             baseSkill: false,
-            coords: {x: 0, y: 8},
+            coords: {x: 0, y: 9},
             numBefore: 1,
             preReqLevels: [10]
         },
         {
             skillID: 'force_mastery',
             baseSkill: true,
-            coords: {x: 0, y: 9},
+            coords: {x: 0, y: 10},
             barSize: 5
         },
         {
             skillID: 'vital_shut',
-            baseSkill: false,
-            coords: {x: 0, y: 10},
-            numBefore: 1,
-            preReqLevels: [1]
-        },
-        {
-            skillID: 'mind_shut',
             baseSkill: false,
             coords: {x: 0, y: 11},
             numBefore: 1,
             preReqLevels: [1]
         },
         {
-            skillID: 'absorb',
+            skillID: 'mind_shut',
             baseSkill: false,
             coords: {x: 0, y: 12},
+            numBefore: 1,
+            preReqLevels: [1]
+        },
+        {
+            skillID: 'absorb',
+            baseSkill: false,
+            coords: {x: 0, y: 13},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [3],
@@ -741,13 +799,13 @@ const treeData = [
         {
             skillID: 'force_charge',
             baseSkill: false,
-            coords: {x: 1, y: 12},
+            coords: {x: 1, y: 13},
             numBefore: 1,
         },
         {
             skillID: 'force_shield',
             baseSkill: false,
-            coords: {x: 0, y: 13},
+            coords: {x: 0, y: 14},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [5],
@@ -756,13 +814,13 @@ const treeData = [
         {
             skillID: 'force_energy',
             baseSkill: false,
-            coords: {x: 1, y: 13},
+            coords: {x: 1, y: 14},
             numBefore: 1,
         },
         {
             skillID: 'force_reset',
             baseSkill: false,
-            coords: {x: 0, y: 14},
+            coords: {x: 0, y: 15},
             numAfter: 1,
             numBefore: 1,
             preReqLevels: [10],
@@ -771,43 +829,43 @@ const treeData = [
         {
             skillID: 'limit_break',
             baseSkill: false,
-            coords: {x: 1, y: 14},
+            coords: {x: 1, y: 15},
             numBefore: 1,
         },
         {
             skillID: 'phys_atk_up',
-            baseSkill: true,
-            coords: {x: 0, y: 15},
-            numAfter: 1,
-            postReqLevels: [3]
-        },
-        {
-            skillID: 'elem_atk_up',
             baseSkill: true,
             coords: {x: 0, y: 16},
             numAfter: 1,
             postReqLevels: [3]
         },
         {
+            skillID: 'elem_atk_up',
+            baseSkill: true,
+            coords: {x: 0, y: 17},
+            numAfter: 1,
+            postReqLevels: [3]
+        },
+        {
             skillID: 'weapon_free',
             baseSkill: false,
-            coords: {x: 1, y: 15},
+            coords: {x: 1, y: 16},
             numBefore: 2,
         },
         {
             skillID: 'hp_up',
             baseSkill: true,
-            coords: {x: 0, y: 17},
+            coords: {x: 0, y: 18},
         },
         {
             skillID: 'tp_up',
             baseSkill: true,
-            coords: {x: 1, y: 17},
+            coords: {x: 1, y: 18},
         },
         {
             skillID: 'mine',
             baseSkill: true,
-            coords: {x: 2, y: 17},
+            coords: {x: 2, y: 18},
         },
     ],
     [ // Gunner

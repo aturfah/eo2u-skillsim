@@ -10,6 +10,7 @@ import {fixSkillDependencyAdd,
   fixSkillDependencyDelete,
   firstDegSkills,
   calculateTotalSP,
+  linkedSkills,
   listIntersect, deepCopy} from './helpers'
 
 function defaultState() {
@@ -34,10 +35,14 @@ class App extends Component {
     const sp = calculateTotalSP(skillState.level, skillState.retirementIdx)
     const activeFDegSkills = listIntersect(Object.keys(skillState.skillsChosen), this.firstDegSkills);
     const skillsChosen = skillState.skillsChosen;
+    const activeLinkedSkills = listIntersect(Object.keys(skillState.skillsChosen), linkedSkills(skillState.activeClassIdx))
 
     let totalSpSpent = 0;
     Object.keys(skillsChosen).forEach(function (key) {
-        totalSpSpent += skillsChosen[key];
+      if (activeLinkedSkills.includes(key)) {
+        return
+      }
+      totalSpSpent += skillsChosen[key];
     });
 
     return sp - totalSpSpent + activeFDegSkills.length
