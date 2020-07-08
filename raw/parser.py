@@ -70,9 +70,9 @@ def parse_table(table_node):
                 force_break = True
             elif node.text is not None and transform_only == True:
                 matches = re.findall('replaces (.+) during transform;', node.text.lower())
-                if not matches:
-                    continue
-                linked_skill = matches[0].replace(' ', '_')
+                if matches:
+                    linked_skill = matches[0].replace(' ', '_')
+                    prerequisites = [{'_id': linked_skill, 'level': 1}]
             elif node.text is not None and 'transformation' in node.text.lower():
                 transform_only = True
 
@@ -86,7 +86,7 @@ def parse_table(table_node):
                     description = node.text.strip()
                 elif node.tag == 'p' and description:
                     prereq_check = True
-                if prereq_check and node.tag == 'ul':
+                if prereq_check and node.tag == 'ul' and not transform_only:
                     prereq_check = False
                     for li_elt in node:
                         raw_prereq = li_elt.text
