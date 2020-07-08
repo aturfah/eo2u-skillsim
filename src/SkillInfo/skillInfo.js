@@ -29,7 +29,11 @@ function buildSkillText(skillDatum) {
     growthOrder.forEach(function (growthID) {
         const rawInfo = skillDatum.growth[growthID];
         if (rawInfo.length === 1) {
-            descr += ' Has a ' + growthID.toLowerCase() + ' of ' + rawInfo[0].value + ' at all levels.'
+            if (levelGrowth.length > 1) {
+                descr += ' Has a ' + growthID.toLowerCase() + ' of ' + rawInfo[0].value + ' at all levels.'
+            } else {
+                descr += ' Has a ' + growthID.toLowerCase() + ' of ' + rawInfo[0].value + '.'
+            }
         } else {
             const trueInfo = []
             rawInfo.forEach(function (pew) {
@@ -68,6 +72,10 @@ function buildSkillText(skillDatum) {
         specialText = "(FORCE BREAK)"
     } else if (skillDatum.transform_only === true) {
         specialText = "(TRANSFORM ONLY)"
+    }
+
+    if (levelGrowth.length <= 1) {
+        levelGrowth = [];
     }
 
     return <div> {header} {specialText} <br/> ---- <br/>
