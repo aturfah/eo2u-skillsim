@@ -661,7 +661,8 @@ const treeData = [
         {
             skillID: 'accelerate',
             baseSkill: true,
-            coords: {x: 4, y: 1}
+            coords: {x: 4, y: 1},
+            displayPosn: "left"
         },
         {
             skillID: 'blade_mastery',
