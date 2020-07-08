@@ -18,7 +18,7 @@ function defaultState() {
     level: 1,
     retirementIdx: 0,
     skillsChosen: {},
-    activeClassIdx: 3,
+    activeClassIdx: 0,
     maxLevel: 70
   };
 }
