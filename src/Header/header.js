@@ -173,7 +173,7 @@ class Header extends Component {
         return <div className="HeaderBar">
             <div className="HeaderImg">
                 <a href="https://github.com/aturfah/eo2u-skillsim">
-                <img src="https://atlus.com/untold2/images/logo.png"  alt="alt_text" style={imgStyle}/>
+                <img src={process.env.PUBLIC_URL + "/skillsim_img.png"}  alt="alt_text" style={imgStyle}/>
                 </a>
             </div>
             <div className="HeaderControls">
