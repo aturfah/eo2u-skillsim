@@ -4,7 +4,7 @@ import './header.css';
 import skillData from '../data/skill_data';
 
 // Helper Functions
-import {isNumber} from '../helpers'
+import {isNumber, retirementLabels} from '../helpers'
 
 function getClasses() {
     const classes = [];
@@ -42,7 +42,6 @@ class Header extends Component {
     }
 
     buildRetirementBox() {
-        const retirementLabels = ['N/A', '30-39', '40-49', '50-59', '60-69', '70-98', '99']
         const retirementOpts = []
         retirementLabels.forEach(function (label, idx) {
             retirementOpts.push(<option key={label} value={idx}>{label}</option>)
@@ -156,6 +155,10 @@ class Header extends Component {
         this.props.updateMethod()
     }
 
+    _copySkillsClipboard() {
+        this.props.copySkillsClipboard()
+    }
+
     render() {
         const classDropdown = this.buildClassDropdown(this.classOpts);
         const skillPointsInfo = <div><span className="HeaderLabel">Skill Points:</span> {this.props.skillPointsRemaining}/{this.props.skillPointsTotal}</div>;
@@ -184,7 +187,7 @@ class Header extends Component {
                 {skillPointsInfo}
                 <div>
                     <span className="ButtonText" onClick={() => this._clearSkills()}>(CLEAR SKILLS)</span> &nbsp;
-                    {/* <span onClick={() => this._resetAll()}>(RESET TO DEFAULT)</span> */}
+                    <span className="ButtonText" onClick={() => this._copySkillsClipboard()}>(COPY BUILD)</span>
                 </div>
             </div>
         </div>

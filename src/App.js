@@ -8,6 +8,7 @@ import SkillTree from './SkillTree/skillTree'
 // Function Import
 import {fixSkillDependencyAdd,
   fixSkillDependencyDelete,
+  exportSkillList,
   firstDegSkills,
   calculateTotalSP,
   linkedSkills,
@@ -46,7 +47,15 @@ class App extends Component {
     });
 
     return sp - totalSpSpent + activeFDegSkills.length
-}
+  }
+
+  copySkillsClipboard() {
+    const remainingSP = this.calculateSpRemaining(this.state);
+    const output = exportSkillList(this.state, remainingSP);
+
+    navigator.clipboard.writeText(output);
+    alert("Copied build to clipboard");
+  }
 
   updateState(key, value=undefined) {
     // Reset Everything
@@ -114,6 +123,7 @@ class App extends Component {
       <div className="App">
         <Header
           updateMethod={this.updateState.bind(this)}
+          copySkillsClipboard={this.copySkillsClipboard.bind(this)}
           level={this.state.level}
           retirementIdx={this.state.retirementIdx}
           skillsChosen={this.state.skillsChosen}
