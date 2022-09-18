@@ -53,6 +53,8 @@ class App extends Component {
     const remainingSP = this.calculateSpRemaining(this.state);
     const output = exportSkillList(this.state, remainingSP);
 
+    navigator.clipboard.writeText(output);
+    alert("Copied build to clipboard");
   }
 
   updateState(key, value=undefined) {
