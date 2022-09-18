@@ -1692,6 +1692,14 @@ const treeData = [
             baseSkill: false,
             coords: {x: 1, y: 3},
             numBefore: 2,
+            numAfter: 1,
+            postReqLevels: [2]
+        },
+        {
+            skillID: 'high_regen',
+            baseSkill: false,
+            coords: {x: 2, y: 3},
+            numBefore: 1
         },
         {
             skillID: 'healing',
