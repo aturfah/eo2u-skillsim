@@ -3,6 +3,8 @@ import masterySkills from './data/mastery_skills';
 import prereqData from './data/prereq_data';
 import skillData from './data/skill_data';
 
+export const retirementLabels = ['N/A', '30-39', '40-49', '50-59', '60-69', '70-98', '99']
+
 export function parsePX (pxStr) {
     return parseInt(String(pxStr).replace('px', ''));
 }
@@ -401,4 +403,45 @@ export function fixSkillDependencyDelete(chosenSkills, activeClassIdx) {
 
     fixMasterySkills(chosenSkills, activeClassIdx)
     return chosenSkills
+}
+
+
+export function exportSkillList(classState, remainingSP) {
+    const chosenSkills = classState.skillsChosen
+    const activeClassIdx = classState.activeClassIdx
+
+    console.log(classState)
+
+    const skillTextList = []
+    const classSkillInfo = skillData[activeClassIdx]
+
+    console.log(classSkillInfo)
+
+    // Get the Info on the class
+    skillTextList.push("Class: " + classSkillInfo.class)
+    skillTextList.push("Level: " + classState.level)
+    skillTextList.push("Retire Level: " + retirementLabels[classState.retirementIdx])
+    skillTextList.push("SP Remaining: " + remainingSP + "/" + calculateTotalSP(classState.level, classState.retirementIdx))
+    skillTextList.push("")
+
+    // Get the info on the skills
+    classSkillInfo.branches.forEach(function (skillBranch) {
+        if (skillBranch.name !== "Force skills" & skillBranch.name !== "References") {
+            const chosenBranchSkills = []
+            skillBranch.skill_data.forEach(function (skillDatum) {
+                if (Object.keys(chosenSkills).includes(skillDatum._id)) {
+                    chosenBranchSkills.push(skillDatum.name + " Lv. " + chosenSkills[skillDatum._id])
+                }
+            })
+
+
+            chosenBranchSkills.forEach(function (skillStr) {
+                skillTextList.push(skillStr)
+            })
+        }
+    });
+
+    console.log(skillTextList)
+
+    return "doot doot"
 }
