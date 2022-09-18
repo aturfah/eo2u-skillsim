@@ -4,7 +4,7 @@ import './header.css';
 import skillData from '../data/skill_data';
 
 // Helper Functions
-import {isNumber} from '../helpers'
+import {isNumber, retirementLabels} from '../helpers'
 
 function getClasses() {
     const classes = [];
@@ -42,7 +42,6 @@ class Header extends Component {
     }
 
     buildRetirementBox() {
-        const retirementLabels = ['N/A', '30-39', '40-49', '50-59', '60-69', '70-98', '99']
         const retirementOpts = []
         retirementLabels.forEach(function (label, idx) {
             retirementOpts.push(<option key={label} value={idx}>{label}</option>)
