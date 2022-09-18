@@ -186,7 +186,7 @@ class Header extends Component {
                 {retirementBox}
                 {skillPointsInfo}
                 <div>
-                    <span className="ButtonText" onClick={() => this._clearSkills()}>(CLEAR SKILLS)</span> &nbsp;
+                    <span className="ButtonText" onClick={() => this._clearSkills()}>(CLEAR SKILLS)</span> <br/>
                     <span className="ButtonText" onClick={() => this._copySkillsClipboard()}>(COPY BUILD)</span>
                 </div>
             </div>
