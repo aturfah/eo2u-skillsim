@@ -50,8 +50,8 @@ class App extends Component {
   }
 
   copySkillsClipboard() {
-    const output = exportSkillList(this.state.skillsChosen, this.state.activeClassIdx);
-    console.log(output)
+    const remainingSP = this.calculateSpRemaining(this.state);
+    const output = exportSkillList(this.state, remainingSP);
 
   }
 
