@@ -94,8 +94,6 @@ function buildSkillText(skillDatum) {
         return oldBuildSkillText(skillDatum)
     }
 
-    console.log(skillDatum)
-
     // Build the table rows
     const regSkillData = {};
     const grimSkillData = {};
