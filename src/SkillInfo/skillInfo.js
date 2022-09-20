@@ -94,6 +94,8 @@ function buildSkillText(skillDatum) {
         return oldBuildSkillText(skillDatum)
     }
 
+    let skillDescr = skillDatum.description;
+
     // Build the table rows
     const regSkillData = {};
     const grimSkillData = {};
@@ -124,6 +126,16 @@ function buildSkillText(skillDatum) {
     });
     rowOrder.forEach(function(label) {
         let curLevel = 0;
+        console.log(skillDatum.growth[label])
+        if (skillDatum.growth[label].length === 2 && skillDatum.growth[label][0].value === skillDatum.growth[label][1].value) {
+            if (skillDescr.includes("\n")) {
+                skillDescr += ' Has a ' + label.toLowerCase() + ' of ' + skillDatum.growth[label][0].value + ' at all levels.'
+            } else {
+                skillDescr += '\n Has a ' + label.toLowerCase() + ' of ' + skillDatum.growth[label][0].value + ' at all levels.'
+            }
+            return
+        }
+
         skillDatum.growth[label].forEach(function(val) {
             curLevel += parseInt(val.levelspan);
             if (curLevel > maxLevel) {
@@ -137,6 +149,9 @@ function buildSkillText(skillDatum) {
     // Get stuff in format to be used by table
     const regSkillRows = []
     rowOrder.forEach(function(val) {
+        if (regSkillData[val].length === 0) {
+            return
+        }
         regSkillRows.push(<tr>
             <td>{val}</td>
             {regSkillData[val]}
@@ -145,6 +160,9 @@ function buildSkillText(skillDatum) {
 
     const grimSkillRows = []
     rowOrder.forEach(function(val) {
+        if (regSkillData[val].length === 0) {
+            return
+        }
         grimSkillRows.push(<tr>
             <td>{val}</td>
             {grimSkillData[val]}
@@ -160,7 +178,7 @@ function buildSkillText(skillDatum) {
         </thead>
         <tbody>
             <tr>
-                <td>{skillDatum.description}</td>
+                <td>{skillDescr.split("\n").map(str => <p className='SkillDescription'>{str}</p>)}</td>
             </tr>
             <tr>
                 <td className='SkillInfoTable'>
