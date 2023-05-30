@@ -136,11 +136,19 @@ function buildSkillText(skillDatum) {
         }
 
         skillDatum.growth[label].forEach(function(val) {
-            curLevel += parseInt(val.levelspan);
+            const startLevel = curLevel;
+            var levelSpan = val.levelspan;
+            curLevel += parseInt(levelSpan);
+            if (startLevel < maxLevel & curLevel > maxLevel) {
+                const levelGap = maxLevel - startLevel;
+                regSkillData[label].push(<td colSpan={levelGap}>{val.value}</td>)
+                levelSpan -= levelGap;
+            }
+
             if (curLevel > maxLevel) {
-                grimSkillData[label].push(<td colSpan={val.levelspan}>{val.value}</td>)
+                grimSkillData[label].push(<td colSpan={levelSpan}>{val.value}</td>)
             } else {
-                regSkillData[label].push(<td colSpan={val.levelspan}>{val.value}</td>)
+                regSkillData[label].push(<td colSpan={levelSpan}>{val.value}</td>)
             }
         })
     }) 
