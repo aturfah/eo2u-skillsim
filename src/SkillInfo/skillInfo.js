@@ -139,6 +139,7 @@ function buildSkillText(skillDatum) {
             const startLevel = curLevel;
             var levelSpan = val.levelspan;
             curLevel += parseInt(levelSpan);
+            // Level 5 skills whose TP cost is the same from levels 5-9
             if (startLevel < maxLevel & curLevel > maxLevel) {
                 const levelGap = maxLevel - startLevel;
                 regSkillData[label].push(<td colSpan={levelGap}>{val.value}</td>)
